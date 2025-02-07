@@ -1,0 +1,237 @@
+    1  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+    2  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+    3  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+    4  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+    5  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+    6  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+    7  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+    8  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+    9  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   10  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   11  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   12  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   13  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   14  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   15  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   16  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   17  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   18  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   19  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   20  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   21  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   22  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   23  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   24  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   25  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   26  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   27  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   28  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   29  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   30  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   31  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   32  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   33  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   34  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   35  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   36  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   37  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   38  /Users/atnasiamengistu/opt/anaconda3/bin/jupyter_mac.command ; exit;
+   39  pkill
+   40  pkill touch bar agent
+   41  pkill "Touch Bar Agent"
+   42  pkill “Touch Bar Agent”
+   43  pkill “Touch Bar Agent”
+   44  killall ControlStrip
+   45  killall ControlStrip
+   46  killall ControlStrip
+   47  pkill"Touch Bar Agent"
+   48  killall ControlStrip
+   49  sudo pkill TouchBarServer;
+   50  sudo pkill TouchBarServer;
+   51  sudo killall “ControlStrip”;
+   52  sudo pkill TouchBarServer;
+   53  sudo killall “ControlStrip”;
+   54  udo pkill TouchBarServer;
+   55  sudo killall "ControlStrip";
+   56  sudo killall "ControlStrip";
+   57  sudo killall "ControlStrip";
+   58  sudo killall "ControlStrip";
+   59  pip3 install biopython
+   60  pip install notebook
+   61  jupyter notebook
+   62  rowcolnames <- list(c("gene1","gene2","gene3","gene4"),
+   63  + c("Eric","Peter","Anna"))
+   64  pip install pgeocode
+   65  pip install pytest
+   66  pip install certifi
+   67  pip install ssl
+   68  pip install requests
+   69  pip install ssl
+   70  pip install urllib.request
+   71  /Applications/Python\ 3.x/Install\ Certificates.command
+   72  /Applications/Python\ 3.x/Install\ Certificates.command
+   73  /Applications/Python\ 3.x/Install\ Certificates.command
+   74  ssh-keygen -t rsa -f ~/.ssh/my-sshikey -C amengistu
+   75  ./google-cloud-sdk/install.sh
+   76  cd ~/Downloads
+   77  tar -xvzf filename.tar.gz -C ~
+   78  cd ~/Downloads
+   79  google-cloud-sdk.tar.gz -C ~
+   80  google-could-sdk.tar.gz -C
+   81  google-cloud-sdk -C
+   82  cd ~/Downloads
+   83  google-cloud-sdk -C ~
+   84  cd ~/Downloads
+   85  google/cloud-sdk -C
+   86  /Users/atnasiamengistu/Downloads/google-cloud-sdk 
+   87  ./google-cloud-sdk/install.sh
+   88  ./google-cloud-sdk/bin/gcloud init
+   89  gcloud compute project-info describe  --format="value(commonInstanceMetadata[items][ssh-keys])"
+   90  ls
+   91  cat my-sshikey.pub
+   92  google-cloud-sdk
+   93  ssh-key
+   94  cat my-sshikey.pub
+   95  ssh-keygen -t rsa -C my-sshikey
+   96  ssh-keygen -t rsa -C my-sshikey
+   97  cat ssh/id_rsa.pub
+   98  id_rsa.pub
+   99  ls ~/.ssh/id_*.pub
+  100  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+  101  ls ~/.ssh/id_*.pub
+  102  ssh-keygen -t rsa -b 4096 -C amengistu
+  103  cat ~/.ssh/id_rsa.pub
+  104  cat ~/.ssh/id_rsa.pub
+  105  ls
+  106  ls ~/.ssh/id_*.pub
+  107  ls ~/.ssh/id_*
+  108  cat /Users/atnasiamengistu/.ssh/id_rsa.pub
+  109  ssh -T git@github.com
+  110  cd /path/to/directory
+  111  git clone git@github.com:your-username/your-repository.git
+  112  get clone git@github.com:atnasia-mengistu/CS131.git
+  113  git clone git@github.com:atnasia-mengistu/CS131.git
+  114  git add .
+  115  git commit -m "Your commit message"
+  116  git push origin main  # or master, depending on your branch
+  117  ls
+  118  cat my-sshikey.pub
+  119  ls 
+  120  clear
+  121  ls ~/.ssh/id_*.pub
+  122  ls 
+  123  ls ~/.ssh/id_*.pub
+  124  cd path/to/cs131
+  125  cd path/to/cs131
+  126  get --version
+  127  git --version
+  128  git config --global atnasia-mengistu
+  129  git config --global atnasia-mengistu git config --global atnasia.mengistu@sjsu.edu
+  130  ssh -T git@github.com
+  131  git clone git@github.com:atnasia-mengistu/CS131.git
+  132  cd path/to/cs131
+  133  mkdir w2
+  134  cd w2
+  135  ls 
+  136  ls d
+  137  ls -d .* */
+  138  ls -d .* */
+  139  ls -d */
+  140  cd path/to/cs131
+  141  rmdir w2
+  142  ls 
+  143  git@github.com:atnasia-mengistu/CS131.git
+  144  rmdir w2
+  145  rm -r w2
+  146  cd
+  147  rm -r w2
+  148  ls
+  149  mkdir ws2
+  150  cd ws2
+  151  pwd
+  152  ls /root
+  153  echo SHOME
+  154  cd ~ pwd
+  155  env | grep HOME
+  156  cd /path/to/CS131
+  157  git clone git@github.com:atnasia-mengistu/CS131.git cd CS131
+  158  ~ atnasiamengistu$ git clone git@github.com:atnasia-mengistu/CS131.git
+  159  cd CS131
+  160  git status 
+  161  git commit -m 
+  162  git commit -m Hi
+  163  git push origgin main 
+  164  git push origin main 
+  165  git push origin main 
+  166  git fetch origin
+  167  git pull origin main --rebase
+  168  git push origin main 
+  169  clear
+  170  ls
+  171  cd 
+  172  ls
+  173  clear
+  174  ls
+  175  clear
+  176  pwd
+  177  clear
+  178  cd CS131
+  179  mkdir ws2
+  180  cd ws2
+  181  echo ~
+  182  clear
+  183  cd
+  184  clear
+  185  ls
+  186  clear
+  187  mkdir -p ~/cs131/ws2
+  188  cd ~/cs131/ws2
+  189  echo $HOME
+  190  cd ~ pwd
+  191  cd ~
+  192  pwd
+  193  cd ~/CS131/ws2
+  194  id
+  195  ls /proc | grep mem
+  196  ls /proc | grep cpu
+  197  vm_stat
+  198  sysctl -a | grep machdep.cpu
+  199  head -n 10/proc/meminfo
+  200  head -n 10 /proc/meminfo
+  201  system_profiler SPHardwareDataType
+  202  sysctl hw.memsize
+  203  sysctl -a | grep machdep.cpu
+  204  sysctl -a | grep machdep.cpu | head -n 10
+  205  sysctl -a | grep machdep.cpu | tail -n 10
+  206  sysctl -a | grep machdep.cpu
+  207  sysctl -a | grep machdep.cpu.core_count
+  208  sysctl -a | grep machdep.cpu.thread_count
+  209  sysctl -a | grep machdep.cpu.brand_string
+  210  sw_vers
+  211  cat /System/Library/CoreServices/SystemVersion.plist
+  212  system_profiler SPSoftwareDataType
+  213  git clone https://github.com/YOUR_GITHUB_USERNAME/cs131.git
+  214  git clone https://github.com/atnasia-mengistu/CS131
+  215  # Navigate to the correct directory
+  216  cd ~/cs131/ws2
+  217  # Save home directory path
+  218  echo "Home Directory Path:" > ws2.txt
+  219  echo $HOME >> ws2.txt
+  220  # Save UID and groups
+  221  echo -e "\nUser ID and Groups:" >> ws2.txt
+  222  id >> ws2.txt
+  223  # Save memory info (macOS alternative)
+  224  echo -e "\nMemory Information:" >> ws2.txt
+  225  sysctl hw.memsize >> ws2.txt
+  226  # Save CPU info
+  227  echo -e "\nCPU Information:" >> ws2.txt
+  228  sysctl -a | grep machdep.cpu >> ws2.txt
+  229  # Save OS version
+  230  echo -e "\nOperating System Version:" >> ws2.txt
+  231  sw_vers >> ws2.txt
+  232  echo "Home Directory Path:" > ws2.txt
+  233  echo $HOME >> ws2.txt
+  234  script ws2.txt
+  235  vim ws2.text
+  236  vim ws2.txt
+  237  history > cmds.log
