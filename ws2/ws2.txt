@@ -1,9 +1,142 @@
-Script started on Thu Feb  6 21:48:34 2025
+#1)
+(base) Atnasias-MacBook-Pro:~ atnasiamengistu$ mkdir -p ~/cs131/ws2
+(base) Atnasias-MacBook-Pro:~ atnasiamengistu$ cd ~/cs131/ws2
+#2)
+(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ echo $HOME
+/Users/atnasiamengistu
+#3)
+(base) Atnasias-MacBook-Pro:~ atnasiamengistu$ cd ~/CS131/ws2
+(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ id
+uid=501(atnasiamengistu) gid=20(staff) groups=20(staff),12(everyone),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),701(com.apple.sharepoint.group.1),33(_appstore),100(_lpoperator),204(_developer),250(_analyticsusers),395(com.apple.access_ftp),398(com.apple.access_screensharing),399(com.apple.access_ssh),400(com.apple.access_remote_ae)
+#4)
+(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ vm_stat
+Mach Virtual Memory Statistics: (page size of 4096 bytes)
+Pages free:                                9060.
+Pages active:                            541014.
+Pages inactive:                          522339.
+Pages speculative:                         3526.
+Pages throttled:                              0.
+Pages wired down:                        554764.
+Pages purgeable:                          31742.
+"Translation faults":                 113219564.
+Pages copy-on-write:                    3469038.
+Pages zero filled:                     65800766.
+Pages reactivated:                      7560601.
+Pages purged:                           1516211.
+File-backed pages:                       338815.
+Anonymous pages:                         728064.
+Pages stored in compressor:             1428708.
+Pages occupied by compressor:            465907.
+Decompressions:                         6271156.
+Compressions:                          10474090.
+Pageins:                                7911164.
+Pageouts:                                714056.
+Swapins:                                 609191.
+Swapouts:                                785523.
+(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ sysctl -a | grep machdep.cpu
+machdep.cpu.tsc_ccc.numerator: 116
+machdep.cpu.tsc_ccc.denominator: 2
+machdep.cpu.mwait.linesize_min: 64
+machdep.cpu.mwait.linesize_max: 64
+machdep.cpu.mwait.extensions: 3
+machdep.cpu.mwait.sub_Cstates: 286531872
+machdep.cpu.thermal.sensor: 1
+machdep.cpu.thermal.dynamic_acceleration: 1
+machdep.cpu.thermal.invariant_APIC_timer: 1
+machdep.cpu.thermal.thresholds: 2
+machdep.cpu.thermal.ACNT_MCNT: 1
+machdep.cpu.thermal.core_power_limits: 1
+machdep.cpu.thermal.fine_grain_clock_mod: 1
+machdep.cpu.thermal.package_thermal_intr: 1
+machdep.cpu.thermal.hardware_feedback: 0
+machdep.cpu.thermal.energy_policy: 1
+machdep.cpu.xsave.extended_state: 31 832 1088 0
+machdep.cpu.xsave.extended_state1: 15 832 256 0
+machdep.cpu.arch_perf.version: 4
+machdep.cpu.arch_perf.number: 4
+machdep.cpu.arch_perf.width: 48
+machdep.cpu.arch_perf.events_number: 7
+machdep.cpu.arch_perf.events: 0
+machdep.cpu.arch_perf.fixed_number: 3
+machdep.cpu.arch_perf.fixed_width: 48
+machdep.cpu.cache.linesize: 64
+machdep.cpu.cache.L2_associativity: 4
+machdep.cpu.cache.size: 256
+machdep.cpu.tlb.inst.large: 8
+machdep.cpu.tlb.data.small: 64
+machdep.cpu.tlb.data.small_level1: 64
+machdep.cpu.address_bits.physical: 39
+machdep.cpu.address_bits.virtual: 48
+machdep.cpu.max_basic: 22
+machdep.cpu.max_ext: 2147483656
+machdep.cpu.vendor: GenuineIntel
+machdep.cpu.brand_string: Intel(R) Core(TM) i5-8257U CPU @ 1.40GHz
+machdep.cpu.family: 6
+machdep.cpu.model: 142
+machdep.cpu.extmodel: 8
+machdep.cpu.extfamily: 0
+machdep.cpu.stepping: 10
+machdep.cpu.feature_bits: 9221959987971750911
+machdep.cpu.leaf7_feature_bits: 43804591 0
+machdep.cpu.leaf7_feature_bits_edx: 3154128384
+machdep.cpu.extfeature_bits: 1241984796928
+machdep.cpu.signature: 526058
+machdep.cpu.brand: 0
+machdep.cpu.features: FPU VME DE PSE TSC MSR PAE MCE CX8 APIC SEP MTRR PGE MCA CMOV PAT PSE36 CLFSH DS ACPI MMX FXSR SSE SSE2 SS HTT TM PBE SSE3 PCLMULQDQ DTES64 MON DSCPL VMX EST TM2 SSSE3 FMA CX16 TPR PDCM SSE4.1 SSE4.2 x2APIC MOVBE POPCNT AES PCID XSAVE OSXSAVE SEGLIM64 TSCTMR AVX1.0 RDRAND F16C
+machdep.cpu.leaf7_features: RDWRFSGS TSC_THREAD_OFFSET SGX BMI1 AVX2 SMEP BMI2 ERMS INVPCID FPU_CSDS MPX RDSEED ADX SMAP CLFSOPT IPT MDCLEAR TSXFA IBRS STIBP L1DF ACAPMSR SSBD
+machdep.cpu.extfeatures: SYSCALL XD 1GBPAGE EM64T LAHF LZCNT PREFETCHW RDTSCP TSCI
+machdep.cpu.logical_per_package: 16
+machdep.cpu.cores_per_package: 8
+machdep.cpu.microcode_version: 246
+machdep.cpu.processor_flag: 6
+machdep.cpu.core_count: 4
+machdep.cpu.thread_count: 8
 
-The default interactive shell is now zsh.
-To update your account to use zsh, please run `chsh -s /bin/zsh`.
-For more details, please visit https://support.apple.com/kb/HT208050.
-[?1034hbash-3.2$ exit
-exit
+(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ system_profiler SPHardwareDataType
+Hardware:
 
-Script done on Thu Feb  6 21:49:35 2025
+    Hardware Overview:
+
+      Model Name: MacBook Pro
+      Model Identifier: MacBookPro15,4
+      Processor Name: Quad-Core Intel Core i5
+      Processor Speed: 1.4 GHz
+      Number of Processors: 1
+      Total Number of Cores: 4
+      L2 Cache (per Core): 256 KB
+      L3 Cache: 6 MB
+      Hyper-Threading Technology: Enabled
+      Memory: 8 GB
+      System Firmware Version: 2069.80.3.0.0 (iBridge: 22.16.13051.0.0,0)
+      OS Loader Version: 582~3311
+      Serial Number (system): FVFYW2KPL40Y
+      Hardware UUID: F4EDF489-4678-5C78-8AF7-F8A37AA98941
+      Provisioning UDID: F4EDF489-4678-5C78-8AF7-F8A37AA98941
+      Activation Lock Status: Enabled
+#5)
+(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ sysctl hw.memsize
+hw.memsize: 8589934592
+(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ echo "$(sysctl -n hw.memsize) / 1024 / 1024 / 1024" | bc
+8
+#6)
+(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ sysctl -a | grep machdep.cpu.core_count
+machdep.cpu.core_count: 4
+(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ sysctl -a | grep machdep.cpu.thread_count
+machdep.cpu.thread_count: 8
+(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ sysctl -a | grep machdep.cpu.brand_string
+machdep.cpu.brand_string: Intel(R) Core(TM) i5-8257U CPU @ 1.40GHz
+#7)
+(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ system_profiler SPSoftwareDataType
+Software:
+
+    System Software Overview:
+
+      System Version: macOS 15.3 (24D60)
+      Kernel Version: Darwin 24.3.0
+      Boot Volume: Macintosh HD
+      Boot Mode: Normal
+      Computer Name: Atnasia’s MacBook Pro
+      User Name: Atnasia Mengistu (atnasiamengistu)
+      Secure Virtual Memory: Enabled
+      System Integrity Protection: Enabled
+      Time since boot: 22 hours, 6 minutes
