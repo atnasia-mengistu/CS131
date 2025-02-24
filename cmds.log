@@ -346,19 +346,3 @@
   346  git clone https://github.com/atnasia-mengistu/CS131.git
   347  git clone git@github.com:atnasia-mengistu/CS131.git
   348  history > cmds.log
-  349  git commit -m "Added ws2 files: ws2.txt and cmds.log"
-  350  git add ws2/ws2.txt
-  351  git add cmds.log
-  352  git push origin main
-  353  cat ~/CS131/ws2/cmds.log
-  354  cat ~/CS131/cmds.log
-  355  clear
-  356  cd ws2
-  357  echo $HOME
-  358  id
-  359  ls /proc | grep mem
-  360  ls /proc | grep cpu
-  361  head /proc/meminfo
-  362  cat /proc/cpuinfo
-  363  cat /etc/os-release
-  364  history > ~/CS131/ws2/cmds.log
