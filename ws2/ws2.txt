@@ -1,142 +1,717 @@
-#1)
-(base) Atnasias-MacBook-Pro:~ atnasiamengistu$ mkdir -p ~/cs131/ws2
-(base) Atnasias-MacBook-Pro:~ atnasiamengistu$ cd ~/cs131/ws2
-#2)
-(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ echo $HOME
-/Users/atnasiamengistu
-#3)
-(base) Atnasias-MacBook-Pro:~ atnasiamengistu$ cd ~/CS131/ws2
-(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ id
-uid=501(atnasiamengistu) gid=20(staff) groups=20(staff),12(everyone),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),701(com.apple.sharepoint.group.1),33(_appstore),100(_lpoperator),204(_developer),250(_analyticsusers),395(com.apple.access_ftp),398(com.apple.access_screensharing),399(com.apple.access_ssh),400(com.apple.access_remote_ae)
-#4)
-(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ vm_stat
-Mach Virtual Memory Statistics: (page size of 4096 bytes)
-Pages free:                                9060.
-Pages active:                            541014.
-Pages inactive:                          522339.
-Pages speculative:                         3526.
-Pages throttled:                              0.
-Pages wired down:                        554764.
-Pages purgeable:                          31742.
-"Translation faults":                 113219564.
-Pages copy-on-write:                    3469038.
-Pages zero filled:                     65800766.
-Pages reactivated:                      7560601.
-Pages purged:                           1516211.
-File-backed pages:                       338815.
-Anonymous pages:                         728064.
-Pages stored in compressor:             1428708.
-Pages occupied by compressor:            465907.
-Decompressions:                         6271156.
-Compressions:                          10474090.
-Pageins:                                7911164.
-Pageouts:                                714056.
-Swapins:                                 609191.
-Swapouts:                                785523.
-(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ sysctl -a | grep machdep.cpu
-machdep.cpu.tsc_ccc.numerator: 116
-machdep.cpu.tsc_ccc.denominator: 2
-machdep.cpu.mwait.linesize_min: 64
-machdep.cpu.mwait.linesize_max: 64
-machdep.cpu.mwait.extensions: 3
-machdep.cpu.mwait.sub_Cstates: 286531872
-machdep.cpu.thermal.sensor: 1
-machdep.cpu.thermal.dynamic_acceleration: 1
-machdep.cpu.thermal.invariant_APIC_timer: 1
-machdep.cpu.thermal.thresholds: 2
-machdep.cpu.thermal.ACNT_MCNT: 1
-machdep.cpu.thermal.core_power_limits: 1
-machdep.cpu.thermal.fine_grain_clock_mod: 1
-machdep.cpu.thermal.package_thermal_intr: 1
-machdep.cpu.thermal.hardware_feedback: 0
-machdep.cpu.thermal.energy_policy: 1
-machdep.cpu.xsave.extended_state: 31 832 1088 0
-machdep.cpu.xsave.extended_state1: 15 832 256 0
-machdep.cpu.arch_perf.version: 4
-machdep.cpu.arch_perf.number: 4
-machdep.cpu.arch_perf.width: 48
-machdep.cpu.arch_perf.events_number: 7
-machdep.cpu.arch_perf.events: 0
-machdep.cpu.arch_perf.fixed_number: 3
-machdep.cpu.arch_perf.fixed_width: 48
-machdep.cpu.cache.linesize: 64
-machdep.cpu.cache.L2_associativity: 4
-machdep.cpu.cache.size: 256
-machdep.cpu.tlb.inst.large: 8
-machdep.cpu.tlb.data.small: 64
-machdep.cpu.tlb.data.small_level1: 64
-machdep.cpu.address_bits.physical: 39
-machdep.cpu.address_bits.virtual: 48
-machdep.cpu.max_basic: 22
-machdep.cpu.max_ext: 2147483656
-machdep.cpu.vendor: GenuineIntel
-machdep.cpu.brand_string: Intel(R) Core(TM) i5-8257U CPU @ 1.40GHz
-machdep.cpu.family: 6
-machdep.cpu.model: 142
-machdep.cpu.extmodel: 8
-machdep.cpu.extfamily: 0
-machdep.cpu.stepping: 10
-machdep.cpu.feature_bits: 9221959987971750911
-machdep.cpu.leaf7_feature_bits: 43804591 0
-machdep.cpu.leaf7_feature_bits_edx: 3154128384
-machdep.cpu.extfeature_bits: 1241984796928
-machdep.cpu.signature: 526058
-machdep.cpu.brand: 0
-machdep.cpu.features: FPU VME DE PSE TSC MSR PAE MCE CX8 APIC SEP MTRR PGE MCA CMOV PAT PSE36 CLFSH DS ACPI MMX FXSR SSE SSE2 SS HTT TM PBE SSE3 PCLMULQDQ DTES64 MON DSCPL VMX EST TM2 SSSE3 FMA CX16 TPR PDCM SSE4.1 SSE4.2 x2APIC MOVBE POPCNT AES PCID XSAVE OSXSAVE SEGLIM64 TSCTMR AVX1.0 RDRAND F16C
-machdep.cpu.leaf7_features: RDWRFSGS TSC_THREAD_OFFSET SGX BMI1 AVX2 SMEP BMI2 ERMS INVPCID FPU_CSDS MPX RDSEED ADX SMAP CLFSOPT IPT MDCLEAR TSXFA IBRS STIBP L1DF ACAPMSR SSBD
-machdep.cpu.extfeatures: SYSCALL XD 1GBPAGE EM64T LAHF LZCNT PREFETCHW RDTSCP TSCI
-machdep.cpu.logical_per_package: 16
-machdep.cpu.cores_per_package: 8
-machdep.cpu.microcode_version: 246
-machdep.cpu.processor_flag: 6
-machdep.cpu.core_count: 4
-machdep.cpu.thread_count: 8
+Script started on 2025-02-24 03:42:57+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="89" LINES="39"]
+]0;atnasia_mengistu@instance-20250202-193014: ~/CS131/ws2[01;32matnasia_mengistu@instance-20250202-193014[00m:[01;34m~/CS131/ws2[00m$ vim ws2.txt
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;39r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[39;1H"ws2.txt" 0L, 0C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[2;1H[94m~                                                                                        [3;1H~                                                                                        [4;1H~                                                                                        [5;1H~                                                                                        [6;1H~                                                                                        [7;1H~                                                                                        [8;1H~                                                                                        [9;1H~                                                                                        [10;1H~                                                                                        [11;1H~                                                                                        [12;1H~                                                                                        [13;1H~                                                                                        [14;1H~                                                                                        [15;1H~                                                                                        [16;1H~                                                                                        [17;1H~                                                                                        [18;1H~                                                                                        [19;1H~                                                                                        [20;1H~                                                                                        [21;1H~                                                                                        [22;1H~                                                                                        [23;1H~                                                                                        [24;1H~                                                                                        [25;1H~                                                                                        [26;1H~                                                                                        [27;1H~                                                                                        [28;1H~                                                                                        [29;1H~                                                                                        [30;1H~                                                                                        [31;1H~                                                                                        [32;1H~                                                                                        [33;1H~                                                                                        [34;1H~                                                                                        [35;1H~                                                                                        [36;1H~                                                                                        [37;1H~                                                                                        [38;1H~                                                                                        [m[39;72H0,0-1[9CAll[1;1H[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12$p[27m[23m[29m[m[H[2J[?25l[2;1H[94m~                                                                                        [3;1H~                                                                                        [4;1H~                                                                                        [5;1H~                                                                                        [6;1H~                                                                                        [7;1H~                                                                                        [8;1H~                                                                                        [9;1H~                                                                                        [10;1H~                                                                                        [11;1H~                                                                                        [12;1H~                                                                                        [13;1H~                                                                                        [14;1H~                                                                                        [15;1H~                                                                                        [16;1H~                                                                                        [17;1H~                                                                                        [18;1H~                                                                                        [19;1H~                                                                                        [20;1H~                                                                                        [21;1H~                                                                                        [22;1H~                                                                                        [23;1H~                                                                                        [24;1H~                                                                                        [25;1H~                                                                                        [26;1H~                                                                                        [27;1H~                                                                                        [28;1H~                                                                                        [29;1H~                                                                                        [30;1H~                                                                                        [31;1H~                                                                                        [32;1H~                                                                                        [33;1H~                                                                                        [34;1H~                                                                                        [35;1H~                                                                                        [36;1H~                                                                                        [37;1H~                                                                                        [38;1H~                                                                                        [m[39;72H0,0-1[9CAll"ws2.txt" 0L, 0C[1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62Hi[1;1H[39;62H [1;1H[39;1H[1m-- INSERT --[m[39;13H[K[39;72H0,1[11CAll[1;1H[?25h[?25l[2;1H[K[39;72H2[2;1H[?25h[?25l[94m~                                                                                        [m[39;72H1[1;1H[?25h[39;1H[K[1;1H[?25l[39;62H^[[1;1H[39;62H  [1;1H[39;72H1,0-1[9CAll[1;1H[?25h[?25l[39;62Hq[1;1H[?25h[?25l[39;63H^M[1;1H[39;62H   [1;1H[?25h[?25l[39;62Hq[1;1H[?25h[?25l[39;63H^M[1;1H[39;62H   [1;1H[?25h[?25l[39;62H:[1;1H[39;62H[K[39;1H:[?2004h[?25hq[?25l[97m[41mE37: No write since last change (add ! to override)[?2004h[1;1H[m[39;72H1,0-1[9CAll[1;1H[?25h[?25l[39;62H:[1;1H[39;1H[K[39;1H:[?2004h[?25hq![?25l[39;3H[K[39;3H[?25h[?25l[39;2H[K[39;2H[?25h [?25l[1;1H[39;72H1,0-1[9CAll[1;1H[?25h[?25l[39;62Hq[1;1H[?25h[?25l[39;63H1[1;1H[39;1H[1mrecording @1[m[39;62H[K[39;72H1,0-1[9CAll[1;1H[?25h[?25l[39;62H^[[1;1H[39;62H  [1;1H[39;62H^[[1;1H[39;62H  [1;1H[?25h[?25l[39;62H^[[1;1H[39;62H  [1;1H[39;62H^[[1;1H[39;62H  [1;1H[?25h[?25l[39;62H^[[1;1H[39;62H  [1;1H[39;62H^[[1;1H[39;62H  [1;1H[?25h[?25l[39;62Hq[1;1H[39;1H[K[1;1H[39;72H1,0-1[9CAll[1;1H[?25h[?25l[39;62Hq[1;1H[?25h[?25l[39;63Hq[1;1H[39;1H[1mrecording @q[m[39;62H[K[39;72H1,0-1[9CAll[1;1H[?25h[?25l[39;62Hq[1;1H[39;1H[K[1;1H[39;72H1,0-1[9CAll[1;1H[?25h[?25l[39;62Hq[1;1H[?25h[?25l[39;63H^M[1;1H[39;62H   [1;1H[?25h[?25l[39;62H1[1;1H[?25h[?25l[39;63H~@k[1;1H[39;62H    [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H^M[1;1H[39;62H  [1;1H[?25h[?25l[39;62H^M[1;1H[39;62H  [1;1H[?25h[?25l[39;62Hi[1;1H[39;62H [1;1H[39;1H[1m-- INSERT --[m[39;72H[K[39;72H1,1[11CAll[1;1H[?25h[?25l[2;1H[K[39;72H2[2;1H[?25h[?25l[3;1H[K[39;72H3[3;1H[?25h[?25l[94m~                                                                                        [m[39;72H2[2;1H[?25h[?25l[94m~                                                                                        [m[39;72H1[1;1H[?25h[39;1H[K[1;1H[?25l[39;62H^[[1;1H[39;62H  [1;1H[39;72H1,0-1[9CAll[1;1H[?25h[?25l[39;62H:[1;1H[39;62H[K[39;1H:[?2004h[?25hq![?25l[?2004l[23;2t[23;1t[39;1H[K[39;1H[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;atnasia_mengistu@instance-20250202-193014: ~/CS131/ws2[01;32matnasia_mengistu@instance-20250202-193014[00m:[01;34m~/CS131/ws2[00m$ history > cmds.log
+]0;atnasia_mengistu@instance-20250202-193014: ~/CS131/ws2[01;32matnasia_mengistu@instance-20250202-193014[00m:[01;34m~/CS131/ws2[00m$ vim cmds.log
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;39r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[39;1H"cmds.log" 349L, 11313C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;5H1  Et2025Dani!
+    2  ssh-keygen
+    3  ssh-keygen -t rsa -f ~/.ssh/my-ssh-key -C amengistu
+    4  gcloud compute project-info describe  --format="value(commonInstanceMetadata[itemss[5;1H][ssh-keys])"
+    5  ls -a
+    6  sort data.txt
+    7  sort data.txt > sorted_data.txt
+    8  cat
+    9  cat ~/.ssh/id_rsa.pub
+   10  ls ~/.ssh/id_
+   11  ls ~/.ssh/id_*
+   12  gcloud compute project-info describe  --format="value(commonInstanceMetadata[itemss[14;1H][ssh-keys])"
+   13  sudo apt update && sudo apt install git -y
+   14  cat ~/.ssh/id_rsa.pub
+   15  ssh -T git@github.com
+   16  gcloud compute project-info describe  --format="value(commonInstanceMetadata[itemss[19;1H][ssh-keys])"
+   17  ls
+   18  ls
+   19  ls ~/.ssh/id_*.pub
+   20  git config --global atnasia-mengistu git config --global atnasia.mengistu@sjsu.edu[24;4H21  ssh -T git@github.com
+   22  ls
+   23  ls -al ~/.ssh
+   24  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   25  ~/.ssh/id_rsa
+   26  ~/.ssh/id_rsa.pub
+   27  ssh-keygen -t rsa -b 4096 -C atnasia.mengistu@sjsu.edu
+   28  ssh -T git@github.com
+   29  git hist
+   30  git
+   31  git status
+   32  apt install python3-pip
+   33  sudo apt install python3-pip
+   34  pip install gdown
+   35  gdown 1fc3saVu2GtG3Rft3zl-VOOsZhaqcSyn3[39;72H1,1[11CTop[1;1H[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12$p[27m[23m[29m[m[H[2J[?25l[1;5H1  Et2025Dani!
+    2  ssh-keygen
+    3  ssh-keygen -t rsa -f ~/.ssh/my-ssh-key -C amengistu
+    4  gcloud compute project-info describe  --format="value(commonInstanceMetadata[itemss[5;1H][ssh-keys])"
+    5  ls -a
+    6  sort data.txt
+    7  sort data.txt > sorted_data.txt
+    8  cat
+    9  cat ~/.ssh/id_rsa.pub
+   10  ls ~/.ssh/id_
+   11  ls ~/.ssh/id_*
+   12  gcloud compute project-info describe  --format="value(commonInstanceMetadata[itemss[14;1H][ssh-keys])"
+   13  sudo apt update && sudo apt install git -y
+   14  cat ~/.ssh/id_rsa.pub
+   15  ssh -T git@github.com
+   16  gcloud compute project-info describe  --format="value(commonInstanceMetadata[itemss[19;1H][ssh-keys])"
+   17  ls
+   18  ls
+   19  ls ~/.ssh/id_*.pub
+   20  git config --global atnasia-mengistu git config --global atnasia.mengistu@sjsu.edu[24;4H21  ssh -T git@github.com
+   22  ls
+   23  ls -al ~/.ssh
+   24  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   25  ~/.ssh/id_rsa
+   26  ~/.ssh/id_rsa.pub
+   27  ssh-keygen -t rsa -b 4096 -C atnasia.mengistu@sjsu.edu
+   28  ssh -T git@github.com
+   29  git hist
+   30  git
+   31  git status
+   32  apt install python3-pip
+   33  sudo apt install python3-pip
+   34  pip install gdown
+   35  gdown 1fc3saVu2GtG3Rft3zl-VOOsZhaqcSyn3[39;72H1,1[11CTop"cmds.log" 349L, 11313C[1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [2;1H[39;72H2[2;1H[?25h[?25l[39;62H~@k[2;1H[39;62H   [3;1H[39;72H3[3;1H[?25h[?25l[39;62H~@k[3;1H[39;62H   [4;1H[39;72H4[4;1H[?25h[?25l[39;62H~@k[4;1H[39;62H   [6;1H[39;72H5[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [7;1H[39;72H6[7;1H[?25h[?25l[39;62H~@k[7;1H[39;62H   [8;1H[39;72H7[8;1H[?25h[?25l[39;62H~@k[8;1H[39;62H   [9;1H[39;72H8[9;1H[?25h[?25l[39;62H~@k[9;1H[39;62H   [10;1H[39;72H9[10;1H[?25h[?25l[39;62H~@k[10;1H[39;62H   [11;1H[39;72H10,1[11;1H[?25h[?25l[39;62H~@k[11;1H[39;62H   [12;1H[39;73H1[12;1H[?25h[?25l[39;62H~@k[12;1H[39;62H   [13;1H[39;73H2[13;1H[?25h[?25l[39;62H~@k[13;1H[39;62H   [15;1H[39;73H3[15;1H[?25h[?25l[39;62H~@k[15;1H[39;62H   [16;1H[39;73H4[16;1H[?25h[?25l[39;62H~@k[16;1H[39;62H   [17;1H[39;73H5[17;1H[?25h[?25l[39;62H~@k[17;1H[39;62H   [18;1H[39;73H6[18;1H[?25h[?25l[39;62H~@k[18;1H[39;62H   [20;1H[39;73H7[20;1H[?25h[?25l[39;62H~@k[20;1H[39;62H   [21;1H[39;73H8[21;1H[?25h[?25l[39;62H~@k[21;1H[39;62H   [22;1H[39;73H9[22;1H[?25h[?25l[39;62H~@k[22;1H[39;62H   [23;1H[39;72H20[23;1H[?25h[?25l[39;62H~@k[23;1H[39;62H   [24;1H[39;73H1[24;1H[?25h[?25l[39;62H~@k[24;1H[39;62H   [25;1H[39;73H2[25;1H[?25h[?25l[39;73H3[26;1H[?25h[?25l[39;62H~@k[26;1H[39;62H   [27;1H[39;73H4[27;1H[?25h[?25l[39;62H~@k[27;1H[39;62H   [28;1H[39;73H5[28;1H[?25h[?25l[39;73H6[29;1H[?25h[?25l[39;62H~@k[29;1H[39;62H   [30;1H[39;73H7[30;1H[?25h[?25l[39;73H8[31;1H[?25h[?25l[39;73H9[32;1H[?25h[?25l[39;72H30[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H36  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;1H[K[39;72H31,1[11C0%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H37  /home/<user-name>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H32,1[11C0%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H38  /home/<atnasia-mengistu>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H33,1[11C0%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;4H39  /home/<atnasia-mengistu>/.local/bin/gdown 1f
+   40  /home/<atnasia_mengistu>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H34,1[11C1%[32;1H[?25h[?25l[39;73H5[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H41  /home/<atnasiamengistu>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H36,1[11C1%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H42  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H37,1[11C1%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H43  pip install gdown[39;72H[K[39;72H38,1[11C2%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H44  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H39,1[11C2%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H45  apt install gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H40,1[11C2%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H46  pip install gdown[39;72H[K[39;72H41,1[11C3%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H47  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H42,1[11C3%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [32;1H[1;38r[1;1H[2M[1;39r[37;4H48  grep '2019-01-02' taxi_data.csv > jan_2.csv
+   49  grep '2019-01-02' 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H43,1[11C3%[32;1H[?25h[?25l[39;73H4[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H50  grep '2019-01-02' 2019-01-h1.csv[39;72H[K[39;72H45,1[11C4%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H51  cut -d',' -f5 2019-01-h1.csv > pickup_ids_jan_2.txt[39;72H[K[39;72H46,1[11C4%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H52  cut -d',' -f5 2019-01-h1.csv[39;72H[K[39;72H47,1[11C4%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;4H53  sort | uniq -c
+   54  pip install gdown[39;72H[K[39;72H48,1[11C5%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;73H9[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H55  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H50,1[11C5%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H56  grep '2019-01-10' 2019-01-h1.csv > jan_10.csv[39;72H[K[39;72H51,1[11C5%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H57  cut -d',' -f5 jan_10.csv > pickup_ids_jan_10.txt[39;72H[K[39;72H52,1[11C6%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H58  sort pickup_ids_jan_10.txt | uniq -c > sorted_pickup_counts_jan_10.txt[39;72H[K[39;72H53,1[11C6%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H59  sort -nr sorted_pickup_counts_jan_10.txt | head -n 3[39;72H[K[39;72H54,1[11C6%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H60  grep '2019-01-02' 2019-01-h1.csv > jan_2.csv[39;72H[K[39;72H55,1[11C7%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H61  cut -d',' -f5 jan_2.csv > pickup_ids_jan_2.txt[39;72H[K[39;72H56,1[11C7%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H62  sort pickup_ids_jan_2.txt | uniq -c > sorted_pickup_counts_jan_2.txt[39;72H[K[39;72H57,1[11C7%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H63  sort -nr sorted_pickup_counts_jan_2.txt | head -n 3[39;72H[K[39;72H58,1[11C8%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H64  cd CS131[39;72H[K[39;72H59,1[11C8%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H65  mkdir CS131[39;72H[K[39;72H60,1[11C8%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H66  pwd[39;72H[K[39;72H61,1[11C9%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H67  cd CS131[39;72H[K[39;72H62,1[11C9%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H68  ls[39;72H[K[39;72H63,1[11C9%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H69  cd CS131.pub[39;72H[K[39;72H64,1[11C9%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H70  cd CS131[39;72H[K[39;72H65,1[10C10%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H71  cd CS131/[39;72H[K[39;72H66,1[10C10%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H72  chmod 464 sample.txt[39;72H[K[39;72H67,1[10C10%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H73  su[39;72H[K[39;72H68,1[10C11%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H74  sudo password[39;72H[K[39;72H69,1[10C11%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H75  sudo passwd[39;72H[K[39;72H70,1[10C11%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H76  su [-[1]] [user][39;72H[K[39;72H71,1[10C12%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H77  su[39;72H[K[39;72H72,1[10C12%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H78  id | grep sudo[39;72H[K[39;72H73,1[10C12%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H79  sudo cat /etc/shadow[39;72H[K[39;72H74,1[10C13%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H80  man ps[39;72H[K[39;72H75,1[10C13%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H81  ps[39;72H[K[39;72H76,1[10C13%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H82  ps aux | head -10[39;72H[K[39;72H77,1[10C14%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H83  long.sh[39;72H[K[39;72H78,1[10C14%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H84  vim long.sh[39;72H[K[39;72H79,1[10C14%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H85  cal long.sh[39;72H[K[39;72H80,1[10C15%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H86  cat long.sh[39;72H[K[39;72H81,1[10C15%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H87  sh long.sh[39;72H[K[39;72H82,1[10C15%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H88  vim long.sh[39;72H[K[39;72H83,1[10C16%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H89  cat long.sh[39;72H[K[39;72H84,1[10C16%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H90  sh long.sh[39;72H[K[39;72H85,1[10C16%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H91  vim long.sh[39;72H[K[39;72H86,1[10C17%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H92  cat long.sh[39;72H[K[39;72H87,1[10C17%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H93  sh long.sh[39;72H[K[39;72H88,1[10C17%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H94  sh long.sh > result.txt &[39;72H[K[39;72H89,1[10C18%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H95  fg &1[39;72H[K[39;72H90,1[10C18%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H96  ls[39;72H[K[39;72H91,1[10C18%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H97  git clone https://github.com/atnasia-mengistu/CS131.git[39;72H[K[39;72H92,1[10C18%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H98  cat CS131[39;72H[K[39;72H93,1[10C19%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H99  mkdir keys[39;72H[K[39;72H94,1[10C19%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H100  mv CS131[39;72H[K[39;72H95,1[10C19%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H101  mv CS131 keys/[39;72H[K[39;72H96,1[10C20%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H102  mv CS131.pub keys/[39;72H[K[39;72H97,1[10C20%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H103  ls[39;72H[K[39;72H98,1[10C20%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H104  git clone https://github.com/atnasia-mengistu/CS131.git[39;72H[K[39;72H99,1[10C21%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H105  ls[39;72H[K[39;72H100,1[9C21%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H106  cs CS131/[39;72H[K[39;72H101,1[9C21%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H107  cd CS131/[39;72H[K[39;72H102,1[9C22%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H108  ls[39;72H[K[39;72H103,1[9C22%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H109  vim .bashrc[39;72H[K[39;72H104,1[9C22%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H110  head .bashrc[39;72H[K[39;72H105,1[9C23%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H111  source ~/.bashrc[39;72H[K[39;72H106,1[9C23%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H112  111[39;72H[K[39;72H107,1[9C23%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H113  crotab -e[39;72H[K[39;72H108,1[9C24%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H114  crontab -e[39;72H[K[39;72H109,1[9C24%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H115  export EDITOR=vim[39;72H[K[39;72H110,1[9C24%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H116  crontab export EDITOR=vim[39;72H[K[39;72H111,1[9C25%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H117  crontab -e[39;72H[K[39;72H112,1[9C25%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H118  ls /var/spool/cron/[39;72H[K[39;72H113,1[9C25%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H119  vim ~/.bashrc[39;72H[K[39;72H114,1[9C26%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H120  source ~/.bashrc[39;72H[K[39;72H115,1[9C26%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H121  l[39;72H[K[39;72H116,1[9C26%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H122  w[39;72H[K[39;72H117,1[9C27%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H123  mkdir -p a1/FARE[39;72H[K[39;72H118,1[9C27%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H124  pwd[39;72H[K[39;72H119,1[9C27%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H125  cd CS131[39;72H[K[39;72H120,1[9C27%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H126  ls[39;72H[K[39;72H121,1[9C28%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H127  cd a1[39;72H[K[39;72H122,1[9C28%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H128  cd FARE[39;72H[K[39;72H123,1[9C28%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H129  pwd[39;72H[K[39;72H124,1[9C29%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H130  cd a1[39;72H[K[39;72H125,1[9C29%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H131  ls -l[39;72H[K[39;72H126,1[9C29%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H132  cd a1[39;72H[K[39;72H127,1[9C30%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H133  ls[39;72H[K[39;72H128,1[9C30%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H134  a1[39;72H[K[39;72H129,1[9C30%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H135  cd a1[39;72H[K[39;72H130,1[9C31%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H136  mkdir -p a1/FARE[39;72H[K[39;72H131,1[9C31%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H137  cd FARE[39;72H[K[39;72H132,1[9C31%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H138  mkidr a1/FARE[39;72H[K[39;72H133,1[9C32%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H139  mkdir a1/FARE[39;72H[K[39;72H134,1[9C32%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H140  cd FARE[39;72H[K[39;72H135,1[9C32%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H141  CD a1[39;72H[K[39;72H136,1[9C33%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H142  cd a1[39;72H[K[39;72H137,1[9C33%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H143  cd FARE[39;72H[K[39;72H138,1[9C33%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H144  grep '50.0,55.0' taxi.data.csv > temp csv[39;72H[K[39;72H139,1[9C34%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H145  grep '50.0,55.0' taxi.data.csv > temp.csv[39;72H[K[39;72H140,1[9C34%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H146  grep "^48.0,60.0" <taxi_data.csv> | cut -d',' -f10 > FARE/sample1.txt[39;72H[K[39;72H141,1[9C34%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H147  grep "^48.0,60.0" <taxi_data.c[39;72H[K[39;72H142,1[9C35%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H148  grep "^48.0,60.0" taxi_data.csv[39;72H[K[39;72H143,1[9C35%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H149  grep "^48.0,60.0" taxi_data.cs[39;72H[K[39;72H144,1[9C35%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H150  vgrep "^48.0,60.0" taxi_data.cs[39;72H[K[39;72H145,1[9C36%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H151  grep "^48.0,60.0" 2019-01-h1.csv[39;72H[K[39;72H146,1[9C36%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H152  mv /path/to/2019-01-h1.csv ~/CS131[39;72H[K[39;72H147,1[9C36%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H153  mv /path/to/taxi_data.csv ~/CS131[39;72H[K[39;72H148,1[9C36%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H154  mv /path/to/taxi_data.csv ~/cs131/a1/[39;72H[K[39;72H149,1[9C37%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H155  find ~ -name "taxi_data.csv"[39;72H[K[39;72H150,1[9C37%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H156  mv /path/to/taxi_data.csv[39;72H[K[39;72H151,1[9C37%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H157  find ~ -name "taxi_data.csv"[39;72H[K[39;72H152,1[9C38%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H158  mv /path/to/taxi_data.csv ~/CS131/[39;72H[K[39;72H153,1[9C38%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H159  ls[39;72H[K[39;72H154,1[9C38%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H160  vim ~/.bashrc[39;72H[K[39;72H155,1[9C39%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H161  source ~/.bashrc[39;72H[K[39;72H156,1[9C39%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H162  l[39;72H[K[39;72H157,1[9C39%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H163  w[39;72H[K[39;72H158,1[9C40%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H164  cd CS131[39;72H[K[39;72H159,1[9C40%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H165  ls[39;72H[K[39;72H160,1[9C40%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H166  cd a1[39;72H[K[39;72H161,1[9C41%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H167  cd FARE[39;72H[K[39;72H162,1[9C41%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H168  grep '48.0,161.0' taxi_data.csv > temp.csv[39;72H[K[39;72H163,1[9C41%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H169  ls[39;72H[K[39;72H164,1[9C42%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H170  ls ~/CS131[39;72H[K[39;72H165,1[9C42%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H171  ls ~[39;72H[K[39;72H166,1[9C42%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H172  ls ~/CS131/a1[39;72H[K[39;72H167,1[9C43%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H173  ls ~/CS131/a1/FARE[39;72H[K[39;72H168,1[9C43%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H174  find ~ name "taxi_data.csv"[39;72H[K[39;72H169,1[9C43%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H175  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H170,1[9C44%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H176  grep '48.0,161.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H171,1[9C44%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H177  cut -d, -f11 temp.csv > a1/FARE/48.0-161.0.txt[39;72H[K[39;72H172,1[9C44%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H178  grep '48.0,161.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H173,1[9C45%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H179  cut -d, -f11 temp.csv > a1/FARE[39;72H[K[39;72H174,1[9C45%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H180  grep '48.0,161.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H175,1[9C45%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H181  cut -d, -f11 temp.csv[39;72H[K[39;72H176,1[9C45%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H182  > 48.0-161.0.txt[39;72H[K[39;72H177,1[9C46%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H183  rm temp.csv[39;72H[K[39;72H178,1[9C46%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H184  ls[39;72H[K[39;72H179,1[9C46%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H185  cd 48.0-161.0.txt[39;72H[K[39;72H180,1[9C47%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H186  cat 48.0-161.0.txt[39;72H[K[39;72H181,1[9C47%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H187  vim 48.0-161.0.txt[39;72H[K[39;72H182,1[9C47%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H188  cat 48.0-161.0.txt[39;72H[K[39;72H183,1[9C48%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H189  clear[39;72H[K[39;72H184,1[9C48%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H190  ls[39;72H[K[39;72H185,1[9C48%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H191  cat 2019-01-h1.csv[39;72H[K[39;72H186,1[9C49%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H192  vim ~/.bashrc[39;72H[K[39;72H187,1[9C49%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H193  source ~/.bashrc[39;72H[K[39;72H188,1[9C49%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H194  l[39;72H[K[39;72H189,1[9C50%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H195  w[39;72H[K[39;72H190,1[9C50%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H196  cd FARE[39;72H[K[39;72H191,1[9C50%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H197  cd CS131/a1/FARE[39;72H[K[39;72H192,1[9C51%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H198  ls[39;72H[K[39;72H193,1[9C51%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H199  cat 48.0-161.0.txt[39;72H[K[39;72H194,1[9C51%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H200  grep '48.0,161.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H195,1[9C52%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H201  cut -d, -f11 temp.csv > a1/FARE/48.0-161.0.txt[39;72H[K[39;72H196,1[9C52%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H202  cut -d, -f11 temp.csv > CS131/a1/FARE/48.0-161.0.txt[39;72H[K[39;72H197,1[9C52%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H203  cut -d, -f11 temp.csv > 48.0-161.0.txt[39;72H[K[39;72H198,1[9C53%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H204  cat 48.0-161.0.txt[39;72H[K[39;72H199,1[9C53%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H205  rm temp.csv[39;72H[K[39;72H200,1[9C53%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H206  grep '50.0,160.0' taxi_data.csv > temp.csv[39;72H[K[39;72H201,1[9C54%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H207  grep '50.0,160.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H202,1[9C54%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H208  cut -d, -f11 temp.csv > 50.0-160.0.txt[39;72H[K[39;72H203,1[9C54%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H209  rm temp.csv[39;72H[K[39;72H204,1[9C54%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H210  paste -sd+ FARE/48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H205,1[9C55%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H211  paste FARE/48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H206,1[9C55%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H212  paste -sd+ 48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H207,1[9C55%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H213  paste -sd+ FARE/48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H208,1[9C56%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H214  paste -sd+ 48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H209,1[9C56%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H215  lines_48_161=$(wc -l < 48.0-161.0.txt)[39;72H[K[39;72H210,1[9C56%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H216  echo "scale=2; $(cat sum_48_161.txt) / $lines_48_161" | bc >> a1.txt[39;72H[K[39;72H211,1[9C57%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H217  paste -sd+ 50.0-160.0.txt | bc | tee sum_50__160.txt[39;72H[K[39;72H212,1[9C57%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H218  paste -sd+ 50.0-160.0.txt | bc | tee sum_50_160.txt[39;72H[K[39;72H213,1[9C57%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H219  lines_50_160=$(wc -l < 50.0-160.0.txt)[39;72H[K[39;72H214,1[9C58%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H220  echo "scale=2; $(cat sum_50_160.txt) / $lines_50_160" | bc >> a1.txt[39;72H[K[39;72H215,1[9C58%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H221  grep "2019-01-10" <dataset.csv> | cut -d',' -f11 | sort -nr | head -1 >> a1.txt[39;72H[K[39;72H216,1[9C58%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H222  grep "2019-01-10" | cut -d',' -f11 | sort -nr | head -1 >> a1.txt[39;72H[K[39;72H217,1[9C59%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H223  grep "2019-01-10" cut -d',' -f11 | sort -nr | head -1 >> a1.txt[39;72H[K[39;72H218,1[9C59%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H224  grep -E ",3|,4|,5|,6|,7|,8|,9" <dataset.csv> | cut -d',' -f3 | sort | uniq -c | soo[38;1Hrt -nr | head -10 >> a1.txt[39;72H[K[39;72H219,1[9C59%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;73H20[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H225  grep -E ",3|,4|,5|,6|,7|,8|,9" 2019-01-h1.csv | cut -d',' -f3 | sort | uniq -c | ss[38;1Hort -nr | head -10 >> a1.txt[39;72H[K[39;72H221,1[9C60%[32;1H[?25h[?25l[39;74H2[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H226  drop off location[39;72H[K[39;72H223,1[9C60%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H227  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f16 | sort -nr | head -n 1
+  228  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f16 | sor[39;72H[K[39;72H224,1[9C61%[32;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H229  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f11 | sort -nr | head -n 1
+  230  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f10 | sort -nr | head -n 1[39;72H[K[39;72H225,1[9C61%[32;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H231  grep -E ',[3-9]|,[0-9]{2,},' 2019-01-h1.csv | cut -d, -f6 | sort | uniq -c | sort  [38;1H-nr | head -n 10[39;72H[K[39;72H226,1[9C62%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;74H7[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H232  history > cmds.log[39;72H[K[39;72H228,1[9C62%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H233  vim cmds.log[39;72H[K[39;72H229,1[9C63%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H234  grep -E ',[3-9]|,[0-9]{2,},' 2019-01-h1.csv | cut -d, -f9 | sort | uniq -c | sort  [38;1H-nr | head -n 10[39;72H[K[39;72H230,1[9C63%[32;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H235  git commit -m "Completed a1 assignment"[39;72H[K[39;72H231,1[9C63%[32;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H236  git clone git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H232,1[9C64%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H237  git clone https://github.com/atnasia-mengistu/CS131[39;72H[K[39;72H233,1[9C64%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H238  git commit -m "Completed a1 assignment"
+  239  git commit[39;72H[K[39;72H234,1[9C65%[32;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H240  git config --global user.email "atnasia.mengistu@sjsu.edu"[39;72H[K[39;72H235,1[9C65%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H241  git config --global user.name Atnasia Mengistu[39;72H[K[39;72H236,1[9C65%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H242  git config --global Atnasia Mengistu[39;72H[K[39;72H237,1[9C66%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H243  git config[39;72H[K[39;72H238,1[9C66%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H244  git config --global "atnasia.mengistu@sjsu.edu"[39;72H[K[39;72H239,1[9C66%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H245  git commit -m[39;72H[K[39;72H240,1[9C66%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H246  git commit -m Done[39;72H[K[39;72H241,1[9C67%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H247  git push origin main[39;72H[K[39;72H242,1[9C67%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H248  a[39;72H[K[39;72H243,1[9C67%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H249  git push origin main[39;72H[K[39;72H244,1[9C68%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H250  git commit -m done[39;72H[K[39;72H245,1[9C68%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H251  git push origin main[39;72H[K[39;72H246,1[9C68%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H252  echo $HOME[39;72H[K[39;72H247,1[9C69%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H253  git fetch origin[39;72H[K[39;72H248,1[9C69%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H254  git push origin main[39;72H[K[39;72H249,1[9C69%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H255  cd CS131[39;72H[K[39;72H250,1[9C70%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H256  cd a1[39;72H[K[39;72H251,1[9C70%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H257  cd FARE[39;72H[K[39;72H252,1[9C70%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H258  ls
+  259  vim cmds.log[39;72H[K[39;72H253,1[9C71%[32;1H[?25h[?25l[39;74H4[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [32;1H[1;38r[1;1H[2M[1;39r[37;3H260  cd CS131/a1/FARE
+  261  vim cdms.log[39;72H[K[39;72H255,1[9C71%[32;1H[?25h[?25l[39;74H6[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H262  vim cmds.log[39;72H[K[39;72H257,1[9C72%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H263  git push origin main[39;72H[K[39;72H258,1[9C72%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H264  cd CS131[39;72H[K[39;72H259,1[9C72%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H265  git push origin main[39;72H[K[39;72H260,1[9C73%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H266  git commit -m Done[39;72H[K[39;72H261,1[9C73%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H267  clear
+  268  cd[39;72H[K[39;72H262,1[9C74%[32;1H[?25h[?25l[39;74H3[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H269  cd CS131[39;72H[K[39;72H264,1[9C74%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H270  cd a1[39;72H[K[39;72H265,1[9C74%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H271  cd FARE
+  272  vim cmds.log[39;72H[K[39;72H266,1[9C75%[32;1H[?25h[?25l[39;74H7[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H273  cd ~/CS131[39;72H[K[39;72H268,1[9C75%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H274  git add a1[39;72H[K[39;72H269,1[9C75%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H275  git commit -m DOne[39;72H[K[39;72H270,1[9C76%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H276  git push origin main[39;72H[K[39;72H271,1[9C76%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H277  cd a1[39;72H[K[39;72H272,1[9C76%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H278  ls[39;72H[K[39;72H273,1[9C77%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H279  cd FARE[39;72H[K[39;72H274,1[9C77%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H280  ls[39;72H[K[39;72H275,1[9C77%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H281  rm 2019-01-h1.csv[39;72H[K[39;72H276,1[9C78%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H282  ls[39;72H[K[39;72H277,1[9C78%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H283  rm CS131[39;72H[K[39;72H278,1[9C78%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H284  rm cdms.logs[39;72H[K[39;72H279,1[9C79%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H285  rm cdms.log[39;72H[K[39;72H280,1[9C79%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H286  ls[39;72H[K[39;72H281,1[9C79%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H287  rm sum_50__160.txt[39;72H[K[39;72H282,1[9C80%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H288  ls[39;72H[K[39;72H283,1[9C80%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H289  cd CS131[39;72H[K[39;72H284,1[9C80%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H290  cd[39;72H[K[39;72H285,1[9C81%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H291  git push origin main[39;72H[K[39;72H286,1[9C81%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H292  git commit -m DOne[39;72H[K[39;72H287,1[9C81%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H293  git clone <your-github-repo-link>[39;72H[K[39;72H288,1[9C81%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H294  cd CS131[39;72H[K[39;72H289,1[9C82%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H295  git push origin main[39;72H[K[39;72H290,1[9C82%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H296  cd CS131[39;72H[K[39;72H291,1[9C82%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H297  git add a1[39;72H[K[39;72H292,1[9C83%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H298  git commit -m DONE[39;72H[K[39;72H293,1[9C83%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H299  git push origin main[39;72H[K[39;72H294,1[9C83%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H300  git clone git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H295,1[9C84%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H301  git clone atnasia-mengistu/CS131.git[39;72H[K[39;72H296,1[9C84%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H302  git git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H297,1[9C84%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H303  git clone git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H298,1[9C85%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H304  git clone https://github.com/atnasia-mengistu/CS131[39;72H[K[39;72H299,1[9C85%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H305  git push origin main[39;72H[K[39;72H300,1[9C85%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H306  cd a1/FARE[39;72H[K[39;72H301,1[9C86%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H307  ls[39;72H[K[39;72H302,1[9C86%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H308  cd CS131[39;72H[K[39;72H303,1[9C86%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H309  ls[39;72H[K[39;72H304,1[9C87%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H310  cd[39;72H[K[39;72H305,1[9C87%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H311  cd CS131[39;72H[K[39;72H306,1[9C87%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H312  ls[39;72H[K[39;72H307,1[9C88%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H313  a1[39;72H[K[39;72H308,1[9C88%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H314  cd a1[39;72H[K[39;72H309,1[9C88%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H315  ls[39;72H[K[39;72H310,1[9C89%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H316  FARE[39;72H[K[39;72H311,1[9C89%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H317  find ~name 2019-01-h1.csv[39;72H[K[39;72H312,1[9C89%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H318  cd[39;72H[K[39;72H313,1[9C90%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H319  ls[39;72H[K[39;72H314,1[9C90%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H320  rm 2019-01-h1.csv[39;72H[K[39;72H315,1[9C90%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H321  ls[39;72H[K[39;72H316,1[9C90%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H322  cd CS131[39;72H[K[39;72H317,1[9C91%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H323  git push origin main[39;72H[K[39;72H318,1[9C91%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H324  rm a1/FARE/2019-01-h1.csv[39;72H[K[39;72H319,1[9C91%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H325  cd a1[39;72H[K[39;72H320,1[9C92%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H326  cd FARE[39;72H[K[39;72H321,1[9C92%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H327  rm 2019-01-h1.csv[39;72H[K[39;72H322,1[9C92%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H328  cd[39;72H[K[39;72H323,1[9C93%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H329  rm CS131/a1/FARE/2019-01-h1.csv[39;72H[K[39;72H324,1[9C93%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H330  git filter-repo --path a1/FARE/2019-01-h1.csv --invert-paths[39;72H[K[39;72H325,1[9C93%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H331  git --path a1/FARE/2019-01-h1.csv --invert-paths[39;72H[K[39;72H326,1[9C94%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H332  git rm --cached a1/FARE/2019-01-h1.csv[39;72H[K[39;72H327,1[9C94%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H333  git rm --cached 2019-01-h1.csv[39;72H[K[39;72H328,1[9C94%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H334  cd CS131[39;72H[K[39;72H329,1[9C95%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H335  git rm --cached 2019-01-h1.csv[39;72H[K[39;72H330,1[9C95%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H336  git rm --cached a1/FARE/2019-01-h1.csv[39;72H[K[39;72H331,1[9C95%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H337  git commit -m rlf[39;72H[K[39;72H332,1[9C96%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H338  git push origin main[39;72H[K[39;72H333,1[9C96%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H339  git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch a1/FAREE[38;1H/2019-01-h1.csv' --prune-empty --tag-name-filter cat -- --all[39;72H[K[39;72H334,1[9C96%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;74H5[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H340  git push origin --force[39;72H[K[39;72H336,1[9C97%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H341  git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch a1/FAREE[38;1H/2019-01-h1.csv' --prune-empty --tag-name-filter cat -- --all[39;72H[K[39;72H337,1[9C97%[32;1H[?25h[?25l[39;74H8[33;1H[?25h[?25l[1;38r[1;1H[3M[1;39r[36;3H342  atnasia-mengistu
+  343  git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch a1/FAREE[38;1H/2019-01-h1.csv' --prune-empty --tag-name-filter cat -- --all[39;72H[K[39;72H339,1[9C98%[31;1H[?25h[?25l[39;73H40[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [32;1H[1;38r[1;1H[2M[1;39r[37;3H344  git push origin --force
+  345  git push origin main[39;72H[K[39;72H341,1[9C98%[32;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H346  git clone https://github.com/atnasia-mengistu/CS131.git[39;72H[K[39;72H342,1[9C99%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H347  git clone git@github.com:atnasia-mengistu/CS131.git
+  348  vim ws2.txt[39;72H[K[39;72H343,1[9C99%[32;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H349  history > cmds.log[39;72H[K[39;72H344,1[9CBot[33;1H[?25h[?25l[39;74H5[34;1H[?25h[?25l[39;62H~@k[34;1H[39;62H   [35;1H[39;74H6[35;1H[?25h[?25l[39;74H7[36;1H[?25h[?25l[39;74H8[37;1H[?25h[?25l[39;74H9[38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [37;1H[39;74H8[37;1H[?25h[?25l[39;62H~@k[37;1H[39;62H   [36;1H[39;74H7[36;1H[?25h[?25l[39;62H~@k[36;1H[39;62H   [35;1H[39;74H6[35;1H[?25h[?25l[39;62H~@k[35;1H[39;62H   [34;1H[39;74H5[34;1H[?25h[?25l[39;62H~@k[34;1H[39;62H   [33;1H[39;74H4[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [34;1H[39;74H5[34;1H[?25h[?25l[39;62H~@k[34;1H[39;62H   [35;1H[39;74H6[35;1H[?25h[?25l[39;62H~@k[35;1H[39;62H   [36;1H[39;74H7[36;1H[?25h[?25l[39;62H~@k[36;1H[39;62H   [37;1H[39;74H8[37;1H[?25h[?25l[39;62H~@k[37;1H[39;62H   [38;1H[39;74H9[38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [37;1H[39;74H8[37;1H[?25h[?25l[39;62H~@k[37;1H[39;62H   [36;1H[39;74H7[36;1H[?25h[?25l[39;62H~@k[36;1H[39;62H   [35;1H[39;74H6[35;1H[?25h[?25l[39;62H~@k[35;1H[39;62H   [34;1H[39;74H5[34;1H[?25h[?25l[39;74H4[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [31;1H[39;74H3[31;1H[?25h[?25l[39;62H~@k[31;1H[39;62H   [30;1H[39;74H2[30;1H[?25h[?25l[39;74H1[28;1H[?25h[?25l[39;62H~@k[28;1H[39;62H   [27;1H[39;74H0[27;1H[?25h[?25l[39;73H39[25;1H[?25h[?25l[39;62H~@k[25;1H[39;62H   [24;1H[39;74H8[24;1H[?25h[?25l[39;74H7[23;1H[?25h[?25l[39;74H6[22;1H[?25h[?25l[39;74H5[21;1H[?25h[?25l[39;62H~@k[21;1H[39;62H   [20;1H[39;74H4[20;1H[?25h[?25l[39;74H3[19;1H[?25h[?25l[39;74H2[18;1H[?25h[?25l[39;62H~@k[18;1H[39;62H   [17;1H[39;74H1[17;1H[?25h[?25l[39;74H0[16;1H[?25h[?25l[39;73H29[15;1H[?25h[?25l[39;62H~@k[15;1H[39;62H   [14;1H[39;74H8[14;1H[?25h[?25l[39;74H7[13;1H[?25h[?25l[39;74H6[12;1H[?25h[?25l[39;62H~@k[12;1H[39;62H   [11;1H[39;74H5[11;1H[?25h[?25l[39;74H4[10;1H[?25h[?25l[39;74H3[9;1H[?25h[?25l[39;62H~@k[9;1H[39;62H   [8;1H[39;74H2[8;1H[?25h[?25l[39;74H1[7;1H[?25h[?25l[39;74H0[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H314  cd a1[39;72H[K[39;72H319,1[9C99%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H313  a1[39;72H[K[39;72H318,1[9C99%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H312  ls[39;72H[K[39;72H317,1[9C99%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H311  cd CS131[39;72H[K[39;72H316,1[9C98%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H310  cd[39;72H[K[39;72H315,1[9C98%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H309  ls[39;72H[K[39;72H314,1[9C98%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H308  cd CS131[38;1H[94m@@@                                                                                      [m[39;72H[K[39;72H313,1[9C97%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H307  ls[39;72H[K[39;72H312,1[9C97%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H306  cd a1/FARE[39;72H[K[39;72H311,1[9C97%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H305  git push origin main[38;1H[94m@@@                                                                                      [m[39;72H[K[39;72H310,1[9C97%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H304  git clone https://github.com/atnasia-mengistu/CS131[39;72H[K[39;72H309,1[9C97%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H303  git clone git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H308,1[9C96%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H302  git git@github.com:atnasia-mengistu/CS131.git[38;1H[94m@@@                                                                                      [m[39;72H[K[39;72H307,1[9C96%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H301  git clone atnasia-mengistu/CS131.git[39;72H[K[39;72H306,1[9C96%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H300  git clone git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H305,1[9C96%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H299  git push origin main[39;72H[K[39;72H304,1[9C95%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H298  git commit -m DONE[39;72H[K[39;72H303,1[9C95%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H297  git add a1[39;72H[K[39;72H302,1[9C95%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H296  cd CS131[39;72H[K[39;72H301,1[9C94%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H295  git push origin main[39;72H[K[39;72H300,1[9C94%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H294  cd CS131[39;72H[K[39;72H299,1[9C94%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H293  git clone <your-github-repo-link>[39;72H[K[39;72H298,1[9C93%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H292  git commit -m DOne[39;72H[K[39;72H297,1[9C93%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H291  git push origin main[39;72H[K[39;72H296,1[9C93%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H290  cd[39;72H[K[39;72H295,1[9C92%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H289  cd CS131[39;72H[K[39;72H294,1[9C92%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H288  ls[39;72H[K[39;72H293,1[9C92%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H287  rm sum_50__160.txt[39;72H[K[39;72H292,1[9C91%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H286  ls[39;72H[K[39;72H291,1[9C91%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H285  rm cdms.log[39;72H[K[39;72H290,1[9C91%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H284  rm cdms.logs[39;72H[K[39;72H289,1[9C90%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H283  rm CS131[39;72H[K[39;72H288,1[9C90%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H282  ls[39;72H[K[39;72H287,1[9C90%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [7;1H[39;74H8[7;1H[?25h[?25l[39;62H~@k[7;1H[39;62H   [8;1H[39;74H9[8;1H[?25h[?25l[39;62H~@k[8;1H[39;62H   [9;1H[39;73H90[9;1H[?25h[?25l[39;62H~@k[9;1H[39;62H   [10;1H[39;74H1[10;1H[?25h[?25l[39;74H2[11;1H[?25h[?25l[39;62H~@k[11;1H[39;62H   [12;1H[39;74H3[12;1H[?25h[?25l[39;74H4[13;1H[?25h[?25l[39;62H~@k[13;1H[39;62H   [14;1H[39;74H5[14;1H[?25h[?25l[39;74H6[15;1H[?25h[?25l[39;62H~@k[15;1H[39;62H   [16;1H[39;74H7[16;1H[?25h[?25l[39;62H~@k[16;1H[39;62H   [17;1H[39;74H8[17;1H[?25h[?25l[39;74H9[18;1H[?25h[?25l[39;62H~@k[18;1H[39;62H   [19;1H[39;72H300[19;1H[?25h[?25l[39;74H1[20;1H[?25h[?25l[39;62H~@k[20;1H[39;62H   [21;1H[39;74H2[21;1H[?25h[?25l[39;74H3[22;1H[?25h[?25l[39;62H~@k[22;1H[39;62H   [23;1H[39;74H4[23;1H[?25h[?25l[39;62H~@k[23;1H[39;62H   [24;1H[39;74H5[24;1H[?25h[?25l[39;74H6[25;1H[?25h[?25l[39;62H~@k[25;1H[39;62H   [26;1H[39;74H7[26;1H[?25h[?25l[39;62H~@k[26;1H[39;62H   [27;1H[39;74H8[27;1H[?25h[?25l[39;62H~@k[27;1H[39;62H   [28;1H[39;74H9[28;1H[?25h[?25l[39;73H10[29;1H[?25h[?25l[39;62H~@k[29;1H[39;62H   [30;1H[39;74H1[30;1H[?25h[?25l[39;62H~@k[30;1H[39;62H   [31;1H[39;74H2[31;1H[?25h[?25l[39;62H~@k[31;1H[39;62H   [32;1H[39;74H3[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;74H4[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H320  rm 2019-01-h1.csv[39;72H[K[39;72H315,1[9C90%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H321  ls[39;72H[K[39;72H316,1[9C90%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H322  cd CS131[39;72H[K[39;72H317,1[9C91%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H323  git push origin main[39;72H[K[39;72H318,1[9C91%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H324  rm a1/FARE/2019-01-h1.csv[39;72H[K[39;72H319,1[9C91%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H325  cd a1[39;72H[K[39;72H320,1[9C92%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H326  cd FARE[39;72H[K[39;72H321,1[9C92%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H327  rm 2019-01-h1.csv[39;72H[K[39;72H322,1[9C92%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H328  cd[39;72H[K[39;72H323,1[9C93%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H329  rm CS131/a1/FARE/2019-01-h1.csv[39;72H[K[39;72H324,1[9C93%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H330  git filter-repo --path a1/FARE/2019-01-h1.csv --invert-paths[39;72H[K[39;72H325,1[9C93%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H331  git --path a1/FARE/2019-01-h1.csv --invert-paths[39;72H[K[39;72H326,1[9C94%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H332  git rm --cached a1/FARE/2019-01-h1.csv[39;72H[K[39;72H327,1[9C94%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H333  git rm --cached 2019-01-h1.csv[39;72H[K[39;72H328,1[9C94%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H334  cd CS131[39;72H[K[39;72H329,1[9C95%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H335  git rm --cached 2019-01-h1.csv[39;72H[K[39;72H330,1[9C95%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H336  git rm --cached a1/FARE/2019-01-h1.csv[39;72H[K[39;72H331,1[9C95%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H337  git commit -m rlf[39;72H[K[39;72H332,1[9C96%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H338  git push origin main[39;72H[K[39;72H333,1[9C96%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H339  git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch a1/FAREE[38;1H/2019-01-h1.csv' --prune-empty --tag-name-filter cat -- --all[39;72H[K[39;72H334,1[9C96%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;74H5[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H340  git push origin --force[39;72H[K[39;72H336,1[9C97%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [32;1H[1;38r[1;1H[2M[1;39r[37;3H341  git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch a1/FAREE[38;1H/2019-01-h1.csv' --prune-empty --tag-name-filter cat -- --all[39;72H[K[39;72H337,1[9C97%[32;1H[?25h[?25l[39;74H8[33;1H[?25h[?25l[1;38r[1;1H[3M[1;39r[36;3H342  atnasia-mengistu
+  343  git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch a1/FAREE[38;1H/2019-01-h1.csv' --prune-empty --tag-name-filter cat -- --all[39;72H[K[39;72H339,1[9C98%[31;1H[?25h[?25l[39;62H~@k[31;1H[39;62H   [33;1H[39;73H40[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H344  git push origin --force
+  345  git push origin main[39;72H[K[39;72H341,1[9C98%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H346  git clone https://github.com/atnasia-mengistu/CS131.git[39;72H[K[39;72H342,1[9C99%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H347  git clone git@github.com:atnasia-mengistu/CS131.git
+  348  vim ws2.txt[39;72H[K[39;72H343,1[9C99%[32;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H349  history > cmds.log[39;72H[K[39;72H344,1[9CBot[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [34;1H[39;74H5[34;1H[?25h[?25l[39;74H6[35;1H[?25h[?25l[39;62H~@k[35;1H[39;62H   [36;1H[39;74H7[36;1H[?25h[?25l[39;74H8[37;1H[?25h[?25l[39;62H~@k[37;1H[39;62H   [38;1H[39;74H9[38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [37;1H[39;74H8[37;1H[?25h[?25l[39;74H7[36;1H[?25h[?25l[39;74H6[35;1H[?25h[?25l[39;74H5[34;1H[?25h[?25l[39;62H~@k[34;1H[39;62H   [33;1H[39;74H4[33;1H[?25h[?25l[39;74H3[31;1H[?25h[?25l[39;74H2[30;1H[?25h[?25l[39;74H1[28;1H[?25h[?25l[39;74H0[27;1H[?25h[?25l[39;73H39[25;1H[?25h[?25l[39;74H8[24;1H[?25h[?25l[39;62H~@k[24;1H[39;62H   [23;1H[39;74H7[23;1H[?25h[?25l[39;74H6[22;1H[?25h[?25l[39;74H5[21;1H[?25h[?25l[39;74H4[20;1H[?25h[?25l[39;74H3[19;1H[?25h[?25l[39;74H2[18;1H[?25h[?25l[39;74H1[17;1H[?25h[?25l[39;74H0[16;1H[?25h[?25l[39;73H29[15;1H[?25h[?25l[39;62H~@k[15;1H[39;62H   [14;1H[39;74H8[14;1H[?25h[?25l[39;74H7[13;1H[?25h[?25l[39;74H6[12;1H[?25h[?25l[39;74H5[11;1H[?25h[?25l[39;74H4[10;1H[?25h[?25l[39;74H3[9;1H[?25h[?25l[39;74H2[8;1H[?25h[?25l[39;74H1[7;1H[?25h[?25l[39;74H0[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H314  cd a1[39;72H[K[39;72H319,1[9C99%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H313  a1[39;72H[K[39;72H318,1[9C99%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H312  ls[39;72H[K[39;72H317,1[9C99%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H311  cd CS131[39;72H[K[39;72H316,1[9C98%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H310  cd[39;72H[K[39;72H315,1[9C98%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H309  ls[39;72H[K[39;72H314,1[9C98%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H308  cd CS131[38;1H[94m@@@                                                                                      [m[39;72H[K[39;72H313,1[9C97%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H307  ls[39;72H[K[39;72H312,1[9C97%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H306  cd a1/FARE[39;72H[K[39;72H311,1[9C97%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H305  git push origin main[38;1H[94m@@@                                                                                      [m[39;72H[K[39;72H310,1[9C97%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H304  git clone https://github.com/atnasia-mengistu/CS131[39;72H[K[39;72H309,1[9C97%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H303  git clone git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H308,1[9C96%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H302  git git@github.com:atnasia-mengistu/CS131.git[38;1H[94m@@@                                                                                      [m[39;72H[K[39;72H307,1[9C96%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H301  git clone atnasia-mengistu/CS131.git[39;72H[K[39;72H306,1[9C96%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H300  git clone git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H305,1[9C96%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H299  git push origin main[39;72H[K[39;72H304,1[9C95%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H298  git commit -m DONE[39;72H[K[39;72H303,1[9C95%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H297  git add a1[39;72H[K[39;72H302,1[9C95%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H296  cd CS131[39;72H[K[39;72H301,1[9C94%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H295  git push origin main[39;72H[K[39;72H300,1[9C94%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H294  cd CS131[39;72H[K[39;72H299,1[9C94%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H293  git clone <your-github-repo-link>[39;72H[K[39;72H298,1[9C93%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H292  git commit -m DOne[39;72H[K[39;72H297,1[9C93%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H291  git push origin main[39;72H[K[39;72H296,1[9C93%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H290  cd[39;72H[K[39;72H295,1[9C92%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H289  cd CS131[39;72H[K[39;72H294,1[9C92%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H288  ls[39;72H[K[39;72H293,1[9C92%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H287  rm sum_50__160.txt[39;72H[K[39;72H292,1[9C91%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H286  ls[39;72H[K[39;72H291,1[9C91%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H285  rm cdms.log[39;72H[K[39;72H290,1[9C91%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H284  rm cdms.logs[39;72H[K[39;72H289,1[9C90%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H283  rm CS131[39;72H[K[39;72H288,1[9C90%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H282  ls[39;72H[K[39;72H287,1[9C90%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H281  rm 2019-01-h1.csv[39;72H[K[39;72H286,1[9C90%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H280  ls[39;72H[K[39;72H285,1[9C89%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H279  cd FARE[39;72H[K[39;72H284,1[9C89%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H278  ls[39;72H[K[39;72H283,1[9C89%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H277  cd a1[39;72H[K[39;72H282,1[9C88%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H276  git push origin main[39;72H[K[39;72H281,1[9C88%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H275  git commit -m DOne[39;72H[K[39;72H280,1[9C88%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H274  git add a1[39;72H[K[39;72H279,1[9C87%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H273  cd ~/CS131[39;72H[K[39;72H278,1[9C87%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H272  vim cmds.log[39;72H[K[39;72H277,1[9C87%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H271  cd FARE[39;72H[K[39;72H276,1[9C86%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H270  cd a1[39;72H[K[39;72H275,1[9C86%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H269  cd CS131[39;72H[K[39;72H274,1[9C86%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H268  cd[39;72H[K[39;72H273,1[9C85%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H267  clear[39;72H[K[39;72H272,1[9C85%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H266  git commit -m Done[39;72H[K[39;72H271,1[9C85%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H265  git push origin main[39;72H[K[39;72H270,1[9C84%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H264  cd CS131[39;72H[K[39;72H269,1[9C84%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H263  git push origin main[39;72H[K[39;72H268,1[9C84%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H262  vim cmds.log[39;72H[K[39;72H267,1[9C83%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H261  vim cdms.log[39;72H[K[39;72H266,1[9C83%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H260  cd CS131/a1/FARE[39;72H[K[39;72H265,1[9C83%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H259  vim cmds.log[39;72H[K[39;72H264,1[9C82%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H258  ls[39;72H[K[39;72H263,1[9C82%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H257  cd FARE[39;72H[K[39;72H262,1[9C82%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H256  cd a1[39;72H[K[39;72H261,1[9C81%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H255  cd CS131[39;72H[K[39;72H260,1[9C81%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H254  git push origin main[39;72H[K[39;72H259,1[9C81%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H253  git fetch origin[39;72H[K[39;72H258,1[9C81%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H252  echo $HOME[39;72H[K[39;72H257,1[9C80%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H251  git push origin main[39;72H[K[39;72H256,1[9C80%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H250  git commit -m done[39;72H[K[39;72H255,1[9C80%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H249  git push origin main[39;72H[K[39;72H254,1[9C79%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H248  a[39;72H[K[39;72H253,1[9C79%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H247  git push origin main[39;72H[K[39;72H252,1[9C79%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H246  git commit -m Done[39;72H[K[39;72H251,1[9C78%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H245  git commit -m[39;72H[K[39;72H250,1[9C78%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H244  git config --global "atnasia.mengistu@sjsu.edu"[39;72H[K[39;72H249,1[9C78%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H243  git config[39;72H[K[39;72H248,1[9C77%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H242  git config --global Atnasia Mengistu[39;72H[K[39;72H247,1[9C77%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H241  git config --global user.name Atnasia Mengistu[39;72H[K[39;72H246,1[9C77%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H240  git config --global user.email "atnasia.mengistu@sjsu.edu"[39;72H[K[39;72H245,1[9C76%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H239  git commit[39;72H[K[39;72H244,1[9C76%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H238  git commit -m "Completed a1 assignment"[39;72H[K[39;72H243,1[9C76%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H237  git clone https://github.com/atnasia-mengistu/CS131[39;72H[K[39;72H242,1[9C75%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H236  git clone git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H241,1[9C75%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H235  git commit -m "Completed a1 assignment"[39;72H[K[39;72H240,1[9C75%[6;1H[?25h[?25l[1;38r[1;1H[2L[1;39r[1;3H234  grep -E ',[3-9]|,[0-9]{2,},' 2019-01-h1.csv | cut -d, -f9 | sort | uniq -c | sort  [2;1H-nr | head -n 10[39;72H[K[39;72H239,1[9C74%[7;1H[?25h[?25l[39;62H~@k[7;1H[39;62H   [6;1H[39;74H8[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H233  vim cmds.log[39;72H[K[39;72H237,1[9C74%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H232  history > cmds.log[39;72H[K[39;72H236,1[9C74%[6;1H[?25h[?25l[1;38r[1;1H[2L[1;39r[1;3H231  grep -E ',[3-9]|,[0-9]{2,},' 2019-01-h1.csv | cut -d, -f6 | sort | uniq -c | sort  [2;1H-nr | head -n 10[39;72H[K[39;72H235,1[9C73%[7;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H230  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f10 | sort -nr | head -n 1[39;72H[K[39;72H234,1[9C73%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H229  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f11 | sort -nr | head -n 1[39;72H[K[39;72H233,1[9C72%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H228  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f16 | sor[39;72H[K[39;72H232,1[9C72%[6;1H[?25h[?25l[1;38r[1;1H[2L[1;39r[1;3H226  drop off location
+  227  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f16 | sort -nr | head -n 1[39;72H[K[39;72H231,1[9C71%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [7;1H[1;38r[1;1H[2L[1;39r[1;3H225  grep -E ",3|,4|,5|,6|,7|,8|,9" 2019-01-h1.csv | cut -d',' -f3 | sort | uniq -c | ss[2;1Hort -nr | head -10 >> a1.txt[39;72H[K[39;72H230,1[9C71%[7;1H[?25h[?25l[39;73H29[6;1H[?25h[?25l[1;38r[1;1H[2L[1;39r[1;3H224  grep -E ",3|,4|,5|,6|,7|,8|,9" <dataset.csv> | cut -d',' -f3 | sort | uniq -c | soo[2;1Hrt -nr | head -10 >> a1.txt[39;72H[K[39;72H228,1[9C70%[7;1H[?25h[?25l[39;74H7[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H223  grep "2019-01-10" cut -d',' -f11 | sort -nr | head -1 >> a1.txt[39;72H[K[39;72H226,1[9C70%[6;1H[?25h[?25l[1;38r[1;1H[2L[1;39r[1;3H221  grep "2019-01-10" <dataset.csv> | cut -d',' -f11 | sort -nr | head -1 >> a1.txt
+  222  grep "2019-01-10" | cut -d',' -f11 | sort -nr | head -1 >> a1.txt[39;72H[K[39;72H225,1[9C69%[6;1H[?25h[?25l[1;38r[1;1H[2L[1;39r[1;3H219  lines_50_160=$(wc -l < 50.0-160.0.txt)
+  220  echo "scale=2; $(cat sum_50_160.txt) / $lines_50_160" | bc >> a1.txt[39;72H[K[39;72H224,1[9C69%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H218  paste -sd+ 50.0-160.0.txt | bc | tee sum_50_160.txt[39;72H[K[39;72H223,1[9C68%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H217  paste -sd+ 50.0-160.0.txt | bc | tee sum_50__160.txt[39;72H[K[39;72H222,1[9C68%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H216  echo "scale=2; $(cat sum_48_161.txt) / $lines_48_161" | bc >> a1.txt[39;72H[K[39;72H221,1[9C68%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H215  lines_48_161=$(wc -l < 48.0-161.0.txt)[39;72H[K[39;72H220,1[9C67%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H214  paste -sd+ 48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H219,1[9C67%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H213  paste -sd+ FARE/48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H218,1[9C67%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H212  paste -sd+ 48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H217,1[9C66%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H211  paste FARE/48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H216,1[9C66%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H210  paste -sd+ FARE/48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H215,1[9C66%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H209  rm temp.csv[39;72H[K[39;72H214,1[9C66%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H208  cut -d, -f11 temp.csv > 50.0-160.0.txt[39;72H[K[39;72H213,1[9C65%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H207  grep '50.0,160.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H212,1[9C65%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H206  grep '50.0,160.0' taxi_data.csv > temp.csv[39;72H[K[39;72H211,1[9C65%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H205  rm temp.csv[39;72H[K[39;72H210,1[9C64%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H204  cat 48.0-161.0.txt[39;72H[K[39;72H209,1[9C64%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H203  cut -d, -f11 temp.csv > 48.0-161.0.txt[39;72H[K[39;72H208,1[9C64%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H202  cut -d, -f11 temp.csv > CS131/a1/FARE/48.0-161.0.txt[39;72H[K[39;72H207,1[9C63%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H201  cut -d, -f11 temp.csv > a1/FARE/48.0-161.0.txt[39;72H[K[39;72H206,1[9C63%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H200  grep '48.0,161.0' 2019-01-h1.csv > temp.csv[38;1H[94m@@@                                                                                      [m[39;72H[K[39;72H205,1[9C63%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H199  cat 48.0-161.0.txt[39;72H[K[39;72H204,1[9C63%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H198  ls[39;72H[K[39;72H203,1[9C62%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H197  cd CS131/a1/FARE[39;72H[K[39;72H202,1[9C62%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H196  cd FARE[38;1H[94m@@@                                                                                      [m[39;72H[K[39;72H201,1[9C62%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H195  w[39;72H[K[39;72H200,1[9C61%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H194  l[39;72H[K[39;72H199,1[9C61%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H193  source ~/.bashrc[39;72H[K[39;72H198,1[9C61%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H192  vim ~/.bashrc[39;72H[K[39;72H197,1[9C61%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H191  cat 2019-01-h1.csv[39;72H[K[39;72H196,1[9C60%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H190  ls[39;72H[K[39;72H195,1[9C60%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H189  clear[38;1H[94m@@@                                                                                      [m[39;72H[K[39;72H194,1[9C60%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H188  cat 48.0-161.0.txt[39;72H[K[39;72H193,1[9C59%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H187  vim 48.0-161.0.txt[38;1H[94m@@@                                                                                      [m[39;72H[K[39;72H192,1[9C59%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H186  cat 48.0-161.0.txt[39;72H[K[39;72H191,1[9C59%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H185  cd 48.0-161.0.txt[39;72H[K[39;72H190,1[9C59%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H184  ls[39;72H[K[39;72H189,1[9C58%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H183  rm temp.csv[39;72H[K[39;72H188,1[9C58%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H182  > 48.0-161.0.txt[39;72H[K[39;72H187,1[9C58%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H181  cut -d, -f11 temp.csv[39;72H[K[39;72H186,1[9C57%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H180  grep '48.0,161.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H185,1[9C57%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H179  cut -d, -f11 temp.csv > a1/FARE[39;72H[K[39;72H184,1[9C57%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H178  grep '48.0,161.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H183,1[9C56%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H177  cut -d, -f11 temp.csv > a1/FARE/48.0-161.0.txt[39;72H[K[39;72H182,1[9C56%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H176  grep '48.0,161.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H181,1[9C56%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H175  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H180,1[9C55%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H174  find ~ name "taxi_data.csv"[39;72H[K[39;72H179,1[9C55%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H173  ls ~/CS131/a1/FARE[39;72H[K[39;72H178,1[9C55%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H172  ls ~/CS131/a1[39;72H[K[39;72H177,1[9C54%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H171  ls ~[39;72H[K[39;72H176,1[9C54%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H170  ls ~/CS131[39;72H[K[39;72H175,1[9C54%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H169  ls[39;72H[K[39;72H174,1[9C54%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H168  grep '48.0,161.0' taxi_data.csv > temp.csv[39;72H[K[39;72H173,1[9C53%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H167  cd FARE[39;72H[K[39;72H172,1[9C53%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H166  cd a1[39;72H[K[39;72H171,1[9C53%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H165  ls[39;72H[K[39;72H170,1[9C52%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H164  cd CS131[39;72H[K[39;72H169,1[9C52%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H163  w[39;72H[K[39;72H168,1[9C52%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H162  l[39;72H[K[39;72H167,1[9C51%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H161  source ~/.bashrc[39;72H[K[39;72H166,1[9C51%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H160  vim ~/.bashrc[39;72H[K[39;72H165,1[9C51%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H159  ls[39;72H[K[39;72H164,1[9C50%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H158  mv /path/to/taxi_data.csv ~/CS131/[39;72H[K[39;72H163,1[9C50%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H157  find ~ -name "taxi_data.csv"[39;72H[K[39;72H162,1[9C50%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H156  mv /path/to/taxi_data.csv[39;72H[K[39;72H161,1[9C49%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H155  find ~ -name "taxi_data.csv"[39;72H[K[39;72H160,1[9C49%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H154  mv /path/to/taxi_data.csv ~/cs131/a1/[39;72H[K[39;72H159,1[9C49%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H153  mv /path/to/taxi_data.csv ~/CS131[39;72H[K[39;72H158,1[9C48%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H152  mv /path/to/2019-01-h1.csv ~/CS131[39;72H[K[39;72H157,1[9C48%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H151  grep "^48.0,60.0" 2019-01-h1.csv[39;72H[K[39;72H156,1[9C48%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H150  vgrep "^48.0,60.0" taxi_data.cs[39;72H[K[39;72H155,1[9C47%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H149  grep "^48.0,60.0" taxi_data.cs[39;72H[K[39;72H154,1[9C47%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H148  grep "^48.0,60.0" taxi_data.csv[39;72H[K[39;72H153,1[9C47%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H147  grep "^48.0,60.0" <taxi_data.c[39;72H[K[39;72H152,1[9C46%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H146  grep "^48.0,60.0" <taxi_data.csv> | cut -d',' -f10 > FARE/sample1.txt[39;72H[K[39;72H151,1[9C46%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H145  grep '50.0,55.0' taxi.data.csv > temp.csv[39;72H[K[39;72H150,1[9C46%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H144  grep '50.0,55.0' taxi.data.csv > temp csv[39;72H[K[39;72H149,1[9C45%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H143  cd FARE[39;72H[K[39;72H148,1[9C45%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H142  cd a1[39;72H[K[39;72H147,1[9C45%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H141  CD a1[39;72H[K[39;72H146,1[9C45%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H140  cd FARE[39;72H[K[39;72H145,1[9C44%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H139  mkdir a1/FARE[39;72H[K[39;72H144,1[9C44%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H138  mkidr a1/FARE[39;72H[K[39;72H143,1[9C44%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H137  cd FARE[39;72H[K[39;72H142,1[9C43%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H136  mkdir -p a1/FARE[39;72H[K[39;72H141,1[9C43%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H135  cd a1[39;72H[K[39;72H140,1[9C43%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H134  a1[39;72H[K[39;72H139,1[9C42%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H133  ls[39;72H[K[39;72H138,1[9C42%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H132  cd a1[39;72H[K[39;72H137,1[9C42%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H131  ls -l[39;72H[K[39;72H136,1[9C41%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H130  cd a1[39;72H[K[39;72H135,1[9C41%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H129  pwd[39;72H[K[39;72H134,1[9C41%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H128  cd FARE[39;72H[K[39;72H133,1[9C40%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H127  cd a1[39;72H[K[39;72H132,1[9C40%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H126  ls[39;72H[K[39;72H131,1[9C40%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H125  cd CS131[39;72H[K[39;72H130,1[9C39%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H124  pwd[39;72H[K[39;72H129,1[9C39%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H123  mkdir -p a1/FARE[39;72H[K[39;72H128,1[9C39%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H122  w[39;72H[K[39;72H127,1[9C38%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H121  l[39;72H[K[39;72H126,1[9C38%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H120  source ~/.bashrc[39;72H[K[39;72H125,1[9C38%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H119  vim ~/.bashrc[39;72H[K[39;72H124,1[9C37%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H118  ls /var/spool/cron/[39;72H[K[39;72H123,1[9C37%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H117  crontab -e[39;72H[K[39;72H122,1[9C37%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H116  crontab export EDITOR=vim[39;72H[K[39;72H121,1[9C36%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H115  export EDITOR=vim[39;72H[K[39;72H120,1[9C36%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H114  crontab -e[39;72H[K[39;72H119,1[9C36%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H113  crotab -e[39;72H[K[39;72H118,1[9C36%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H112  111[39;72H[K[39;72H117,1[9C35%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H111  source ~/.bashrc[39;72H[K[39;72H116,1[9C35%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H110  head .bashrc[39;72H[K[39;72H115,1[9C35%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H109  vim .bashrc[39;72H[K[39;72H114,1[9C34%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;3H108  ls[39;72H[K[39;72H113,1[9C34%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H107  cd CS131/[39;72H[K[39;72H112,1[9C34%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H106  cs CS131/[39;72H[K[39;72H111,1[9C33%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H105  ls[39;72H[K[39;72H110,1[9C33%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H104  git clone https://github.com/atnasia-mengistu/CS131.git[39;72H[K[39;72H109,1[9C33%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H103  ls[39;72H[K[39;72H108,1[9C32%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H102  mv CS131.pub keys/[39;72H[K[39;72H107,1[9C32%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H101  mv CS131 keys/[39;72H[K[39;72H106,1[9C32%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;3H100  mv CS131[39;72H[K[39;72H105,1[9C31%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H99  mkdir keys[39;72H[K[39;72H104,1[9C31%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;4H98  cat CS131[39;72H[K[39;72H103,1[9C31%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H97  git clone https://github.com/atnasia-mengistu/CS131.git[39;72H[K[39;72H102,1[9C30%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H96  ls[39;72H[K[39;72H101,1[9C30%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H95  fg &1[39;72H[K[39;72H100,1[9C30%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H94  sh long.sh > result.txt &[39;72H[K[39;72H99,1[10C29%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H93  sh long.sh[39;72H[K[39;72H98,1[10C29%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H92  cat long.sh[39;72H[K[39;72H97,1[10C29%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H91  vim long.sh[39;72H[K[39;72H96,1[10C28%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H90  sh long.sh[39;72H[K[39;72H95,1[10C28%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H89  cat long.sh[39;72H[K[39;72H94,1[10C28%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;4H88  vim long.sh[39;72H[K[39;72H93,1[10C27%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H87  sh long.sh[39;72H[K[39;72H92,1[10C27%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H86  cat long.sh[39;72H[K[39;72H91,1[10C27%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H85  cal long.sh[39;72H[K[39;72H90,1[10C27%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H84  vim long.sh[39;72H[K[39;72H89,1[10C26%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H83  long.sh[39;72H[K[39;72H88,1[10C26%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H82  ps aux | head -10[39;72H[K[39;72H87,1[10C26%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H81  ps[39;72H[K[39;72H86,1[10C25%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H80  man ps[39;72H[K[39;72H85,1[10C25%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H79  sudo cat /etc/shadow[39;72H[K[39;72H84,1[10C25%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;4H78  id | grep sudo[39;72H[K[39;72H83,1[10C24%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H77  su[39;72H[K[39;72H82,1[10C24%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H76  su [-[1]] [user][39;72H[K[39;72H81,1[10C24%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H75  sudo passwd[39;72H[K[39;72H80,1[10C23%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H74  sudo password[39;72H[K[39;72H79,1[10C23%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H73  su[39;72H[K[39;72H78,1[10C23%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H72  chmod 464 sample.txt[39;72H[K[39;72H77,1[10C22%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H71  cd CS131/[39;72H[K[39;72H76,1[10C22%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H70  cd CS131[39;72H[K[39;72H75,1[10C22%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;4H69  cd CS131.pub[39;72H[K[39;72H74,1[10C21%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H68  ls[39;72H[K[39;72H73,1[10C21%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H67  cd CS131[39;72H[K[39;72H72,1[10C21%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H66  pwd[39;72H[K[39;72H71,1[10C20%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H65  mkdir CS131[39;72H[K[39;72H70,1[10C20%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H64  cd CS131[39;72H[K[39;72H69,1[10C20%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H63  sort -nr sorted_pickup_counts_jan_2.txt | head -n 3[39;72H[K[39;72H68,1[10C19%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H62  sort pickup_ids_jan_2.txt | uniq -c > sorted_pickup_counts_jan_2.txt[39;72H[K[39;72H67,1[10C19%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;4H61  cut -d',' -f5 jan_2.csv > pickup_ids_jan_2.txt[39;72H[K[39;72H66,1[10C19%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H60  grep '2019-01-02' 2019-01-h1.csv > jan_2.csv[39;72H[K[39;72H65,1[10C18%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H59  sort -nr sorted_pickup_counts_jan_10.txt | head -n 3[39;72H[K[39;72H64,1[10C18%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H58  sort pickup_ids_jan_10.txt | uniq -c > sorted_pickup_counts_jan_10.txt[39;72H[K[39;72H63,1[10C18%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H57  cut -d',' -f5 jan_10.csv > pickup_ids_jan_10.txt[39;72H[K[39;72H62,1[10C18%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H56  grep '2019-01-10' 2019-01-h1.csv > jan_10.csv[39;72H[K[39;72H61,1[10C17%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H55  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H60,1[10C17%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H54  pip install gdown[39;72H[K[39;72H59,1[10C17%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;4H53  sort | uniq -c[39;72H[K[39;72H58,1[10C16%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H52  cut -d',' -f5 2019-01-h1.csv[39;72H[K[39;72H57,1[10C16%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H51  cut -d',' -f5 2019-01-h1.csv > pickup_ids_jan_2.txt[39;72H[K[39;72H56,1[10C16%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H50  grep '2019-01-02' 2019-01-h1.csv[39;72H[K[39;72H55,1[10C15%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H49  grep '2019-01-02' 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H54,1[10C15%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H48  grep '2019-01-02' taxi_data.csv > jan_2.csv[39;72H[K[39;72H53,1[10C15%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H47  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H52,1[10C14%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H46  pip install gdown[39;72H[K[39;72H51,1[10C14%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;4H45  apt install gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H50,1[10C14%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H44  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H49,1[10C13%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H43  pip install gdown[39;72H[K[39;72H48,1[10C13%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H42  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H47,1[10C13%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H41  /home/<atnasiamengistu>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H46,1[10C12%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H40  /home/<atnasia_mengistu>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H45,1[10C12%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H39  /home/<atnasia-mengistu>/.local/bin/gdown 1f[39;72H[K[39;72H44,1[10C12%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;4H38  /home/<atnasia-mengistu>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H43,1[10C11%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H37  /home/<user-name>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H42,1[10C11%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H36  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H41,1[10C11%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H35  gdown 1fc3saVu2GtG3Rft3zl-VOOsZhaqcSyn3[39;72H[K[39;72H40,1[10C10%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H34  pip install gdown[39;72H[K[39;72H39,1[10C10%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H33  sudo apt install python3-pip[39;72H[K[39;72H38,1[10C10%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H32  apt install python3-pip[39;72H[K[39;72H37,1[11C9%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;4H31  git status[39;72H[K[39;72H36,1[11C9%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H30  git[39;72H[K[39;72H35,1[11C9%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H29  git hist[39;72H[K[39;72H34,1[11C9%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H28  ssh -T git@github.com[39;72H[K[39;72H33,1[11C8%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H27  ssh-keygen -t rsa -b 4096 -C atnasia.mengistu@sjsu.edu[39;72H[K[39;72H32,1[11C8%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H26  ~/.ssh/id_rsa.pub[39;72H[K[39;72H31,1[11C8%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;4H25  ~/.ssh/id_rsa[39;72H[K[39;72H30,1[11C7%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H24  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"[39;72H[K[39;72H29,1[11C7%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H23  ls -al ~/.ssh[39;72H[K[39;72H28,1[11C7%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H22  ls[39;72H[K[39;72H27,1[11C6%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H21  ssh -T git@github.com[39;72H[K[39;72H26,1[11C6%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H20  git config --global atnasia-mengistu git config --global atnasia.mengistu@sjsu.edu[39;72H[K[39;72H25,1[11C6%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H19  ls ~/.ssh/id_*.pub[39;72H[K[39;72H24,1[11C5%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;4H18  ls[39;72H[K[39;72H23,1[11C5%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H17  ls[39;72H[K[39;72H22,1[11C5%[6;1H[?25h[?25l[1;38r[1;1H[2L[1;39r[1;4H16  gcloud compute project-info describe  --format="value(commonInstanceMetadata[itemss[2;1H][ssh-keys])"[39;72H[K[39;72H21,1[11C4%[7;1H[?25h[?25l[39;73H0[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H15  ssh -T git@github.com[39;72H[K[39;72H19,1[11C4%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H14  cat ~/.ssh/id_rsa.pub[39;72H[K[39;72H18,1[11C4%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;4H13  sudo apt update && sudo apt install git -y[39;72H[K[39;72H17,1[11C3%[6;1H[?25h[?25l[1;38r[1;1H[2L[1;39r[1;4H12  gcloud compute project-info describe  --format="value(commonInstanceMetadata[itemss[2;1H][ssh-keys])"[39;72H[K[39;72H16,1[11C3%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H11  ls ~/.ssh/id_*[39;72H[K[39;72H15,1[11C3%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;4H10  ls ~/.ssh/id_[39;72H[K[39;72H14,1[11C2%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;5H9  cat ~/.ssh/id_rsa.pub[39;72H[K[39;72H13,1[11C2%[6;1H[?25h[?25l[1;38r[1;1H[2L[1;39r[1;5H7  sort data.txt > sorted_data.txt
+    8  cat[39;72H[K[39;72H12,1[11C1%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;5H6  sort data.txt[39;72H[K[39;72H11,1[11C1%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;5H5  ls -a[39;72H[K[39;72H10,1[11C1%[6;1H[?25h[?25l[1;38r[1;1H[2L[1;39r[1;5H4  gcloud compute project-info describe  --format="value(commonInstanceMetadata[itemss[2;1H][ssh-keys])"[39;72H[K[39;72H9,1[12C0%[7;1H[?25h[?25l[39;72H8[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;5H3  ssh-keygen -t rsa -f ~/.ssh/my-ssh-key -C amengistu[39;72H[K[39;72H7,1[12C0%[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [6;1H[1;38r[1;1H[L[1;39r[1;5H2  ssh-keygen[39;72H[K[39;72H6,1[12C0%[6;1H[?25h[?25l[1;38r[1;1H[L[1;39r[1;5H1  Et2025Dani![39;72H[K[39;72H5,1[11CTop[6;1H[?25h[?25l[39;72H4[4;1H[?25h[?25l[39;72H3[3;1H[?25h[?25l[39;72H2[2;1H[?25h[?25l[39;62H~@k[2;1H[39;62H   [1;1H[39;72H1[1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [1;1H[?25h[?25l[39;62H~@k[1;1H[39;62H   [2;1H[39;72H2[2;1H[?25h[?25l[39;62H~@k[2;1H[39;62H   [3;1H[39;72H3[3;1H[?25h[?25l[39;62H~@k[3;1H[39;62H   [4;1H[39;72H4[4;1H[?25h[?25l[39;62H~@k[4;1H[39;62H   [6;1H[39;72H5[6;1H[?25h[?25l[39;62H~@k[6;1H[39;62H   [7;1H[39;72H6[7;1H[?25h[?25l[39;62H~@k[7;1H[39;62H   [8;1H[39;72H7[8;1H[?25h[?25l[39;72H8[9;1H[?25h[?25l[39;62H~@k[9;1H[39;62H   [10;1H[39;72H9[10;1H[?25h[?25l[39;72H10,1[11;1H[?25h[?25l[39;62H~@k[11;1H[39;62H   [12;1H[39;73H1[12;1H[?25h[?25l[39;73H2[13;1H[?25h[?25l[39;73H3[15;1H[?25h[?25l[39;62H~@k[15;1H[39;62H   [16;1H[39;73H4[16;1H[?25h[?25l[39;73H5[17;1H[?25h[?25l[39;73H6[18;1H[?25h[?25l[39;62H~@k[18;1H[39;62H   [20;1H[39;73H7[20;1H[?25h[?25l[39;73H8[21;1H[?25h[?25l[39;73H9[22;1H[?25h[?25l[39;72H20[23;1H[?25h[?25l[39;73H1[24;1H[?25h[?25l[39;62H~@k[24;1H[39;62H   [25;1H[39;73H2[25;1H[?25h[?25l[39;73H3[26;1H[?25h[?25l[39;73H4[27;1H[?25h[?25l[39;73H5[28;1H[?25h[?25l[39;62H~@k[28;1H[39;62H   [29;1H[39;73H6[29;1H[?25h[?25l[39;73H7[30;1H[?25h[?25l[39;73H8[31;1H[?25h[?25l[39;73H9[32;1H[?25h[?25l[39;72H30[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H36  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H31,1[11C0%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H37  /home/<user-name>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H32,1[11C0%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H38  /home/<atnasia-mengistu>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H33,1[11C0%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;4H39  /home/<atnasia-mengistu>/.local/bin/gdown 1f
+   40  /home/<atnasia_mengistu>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H34,1[11C1%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;73H5[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H41  /home/<atnasiamengistu>/.local/bin/gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H36,1[11C1%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H42  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H37,1[11C1%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H43  pip install gdown[39;72H[K[39;72H38,1[11C2%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H44  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H39,1[11C2%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H45  apt install gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H40,1[11C2%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H46  pip install gdown[39;72H[K[39;72H41,1[11C3%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H47  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H42,1[11C3%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [32;1H[1;38r[1;1H[2M[1;39r[37;4H48  grep '2019-01-02' taxi_data.csv > jan_2.csv
+   49  grep '2019-01-02' 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H43,1[11C3%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;73H4[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H50  grep '2019-01-02' 2019-01-h1.csv[39;72H[K[39;72H45,1[11C4%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H51  cut -d',' -f5 2019-01-h1.csv > pickup_ids_jan_2.txt[39;72H[K[39;72H46,1[11C4%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H52  cut -d',' -f5 2019-01-h1.csv[39;72H[K[39;72H47,1[11C4%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [32;1H[1;38r[1;1H[2M[1;39r[37;4H53  sort | uniq -c
+   54  pip install gdown[39;72H[K[39;72H48,1[11C5%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;73H9[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H55  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H50,1[11C5%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H56  grep '2019-01-10' 2019-01-h1.csv > jan_10.csv[39;72H[K[39;72H51,1[11C5%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H57  cut -d',' -f5 jan_10.csv > pickup_ids_jan_10.txt[39;72H[K[39;72H52,1[11C6%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H58  sort pickup_ids_jan_10.txt | uniq -c > sorted_pickup_counts_jan_10.txt[39;72H[K[39;72H53,1[11C6%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H59  sort -nr sorted_pickup_counts_jan_10.txt | head -n 3[39;72H[K[39;72H54,1[11C6%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H60  grep '2019-01-02' 2019-01-h1.csv > jan_2.csv[39;72H[K[39;72H55,1[11C7%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H61  cut -d',' -f5 jan_2.csv > pickup_ids_jan_2.txt[39;72H[K[39;72H56,1[11C7%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H62  sort pickup_ids_jan_2.txt | uniq -c > sorted_pickup_counts_jan_2.txt[39;72H[K[39;72H57,1[11C7%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H63  sort -nr sorted_pickup_counts_jan_2.txt | head -n 3[39;72H[K[39;72H58,1[11C8%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H64  cd CS131[39;72H[K[39;72H59,1[11C8%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H65  mkdir CS131[39;72H[K[39;72H60,1[11C8%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H66  pwd[39;72H[K[39;72H61,1[11C9%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H67  cd CS131[39;72H[K[39;72H62,1[11C9%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H68  ls[39;72H[K[39;72H63,1[11C9%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H69  cd CS131.pub[39;72H[K[39;72H64,1[11C9%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H70  cd CS131[39;72H[K[39;72H65,1[10C10%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H71  cd CS131/[39;72H[K[39;72H66,1[10C10%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H72  chmod 464 sample.txt[39;72H[K[39;72H67,1[10C10%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H73  su[39;72H[K[39;72H68,1[10C11%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H74  sudo password[39;72H[K[39;72H69,1[10C11%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H75  sudo passwd[39;72H[K[39;72H70,1[10C11%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H76  su [-[1]] [user][39;72H[K[39;72H71,1[10C12%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H77  su[39;72H[K[39;72H72,1[10C12%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H78  id | grep sudo[39;72H[K[39;72H73,1[10C12%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H79  sudo cat /etc/shadow[39;72H[K[39;72H74,1[10C13%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H80  man ps[39;72H[K[39;72H75,1[10C13%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H81  ps[39;72H[K[39;72H76,1[10C13%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H82  ps aux | head -10[39;72H[K[39;72H77,1[10C14%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H83  long.sh[39;72H[K[39;72H78,1[10C14%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H84  vim long.sh[39;72H[K[39;72H79,1[10C14%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H85  cal long.sh[39;72H[K[39;72H80,1[10C15%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H86  cat long.sh[39;72H[K[39;72H81,1[10C15%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H87  sh long.sh[39;72H[K[39;72H82,1[10C15%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H88  vim long.sh[39;72H[K[39;72H83,1[10C16%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H89  cat long.sh[39;72H[K[39;72H84,1[10C16%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H90  sh long.sh[39;72H[K[39;72H85,1[10C16%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H91  vim long.sh[39;72H[K[39;72H86,1[10C17%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H92  cat long.sh[39;72H[K[39;72H87,1[10C17%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H93  sh long.sh[39;72H[K[39;72H88,1[10C17%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H94  sh long.sh > result.txt &[39;72H[K[39;72H89,1[10C18%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H95  fg &1[39;72H[K[39;72H90,1[10C18%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H96  ls[39;72H[K[39;72H91,1[10C18%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H97  git clone https://github.com/atnasia-mengistu/CS131.git[39;72H[K[39;72H92,1[10C18%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;4H98  cat CS131[39;72H[K[39;72H93,1[10C19%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;4H99  mkdir keys[39;72H[K[39;72H94,1[10C19%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H100  mv CS131[39;72H[K[39;72H95,1[10C19%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H101  mv CS131 keys/[39;72H[K[39;72H96,1[10C20%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H102  mv CS131.pub keys/[39;72H[K[39;72H97,1[10C20%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H103  ls[39;72H[K[39;72H98,1[10C20%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H104  git clone https://github.com/atnasia-mengistu/CS131.git[39;72H[K[39;72H99,1[10C21%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H105  ls[39;72H[K[39;72H100,1[9C21%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H106  cs CS131/[39;72H[K[39;72H101,1[9C21%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H107  cd CS131/[39;72H[K[39;72H102,1[9C22%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H108  ls[39;72H[K[39;72H103,1[9C22%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H109  vim .bashrc[39;72H[K[39;72H104,1[9C22%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H110  head .bashrc[39;72H[K[39;72H105,1[9C23%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H111  source ~/.bashrc[39;72H[K[39;72H106,1[9C23%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H112  111[39;72H[K[39;72H107,1[9C23%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H113  crotab -e[39;72H[K[39;72H108,1[9C24%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H114  crontab -e[39;72H[K[39;72H109,1[9C24%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H115  export EDITOR=vim[39;72H[K[39;72H110,1[9C24%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H116  crontab export EDITOR=vim[39;72H[K[39;72H111,1[9C25%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H117  crontab -e[39;72H[K[39;72H112,1[9C25%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H118  ls /var/spool/cron/[39;72H[K[39;72H113,1[9C25%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H119  vim ~/.bashrc[39;72H[K[39;72H114,1[9C26%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H120  source ~/.bashrc[39;72H[K[39;72H115,1[9C26%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H121  l[39;72H[K[39;72H116,1[9C26%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H122  w[39;72H[K[39;72H117,1[9C27%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H123  mkdir -p a1/FARE[39;72H[K[39;72H118,1[9C27%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H124  pwd[39;72H[K[39;72H119,1[9C27%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H125  cd CS131[39;72H[K[39;72H120,1[9C27%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H126  ls[39;72H[K[39;72H121,1[9C28%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H127  cd a1[39;72H[K[39;72H122,1[9C28%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H128  cd FARE[39;72H[K[39;72H123,1[9C28%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H129  pwd[39;72H[K[39;72H124,1[9C29%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H130  cd a1[39;72H[K[39;72H125,1[9C29%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H131  ls -l[39;72H[K[39;72H126,1[9C29%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H132  cd a1[39;72H[K[39;72H127,1[9C30%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H133  ls[39;72H[K[39;72H128,1[9C30%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H134  a1[39;72H[K[39;72H129,1[9C30%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H135  cd a1[39;72H[K[39;72H130,1[9C31%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H136  mkdir -p a1/FARE[39;72H[K[39;72H131,1[9C31%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H137  cd FARE[39;72H[K[39;72H132,1[9C31%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H138  mkidr a1/FARE[39;72H[K[39;72H133,1[9C32%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H139  mkdir a1/FARE[39;72H[K[39;72H134,1[9C32%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H140  cd FARE[39;72H[K[39;72H135,1[9C32%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H141  CD a1[39;72H[K[39;72H136,1[9C33%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H142  cd a1[39;72H[K[39;72H137,1[9C33%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H143  cd FARE[39;72H[K[39;72H138,1[9C33%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H144  grep '50.0,55.0' taxi.data.csv > temp csv[39;72H[K[39;72H139,1[9C34%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H145  grep '50.0,55.0' taxi.data.csv > temp.csv[39;72H[K[39;72H140,1[9C34%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H146  grep "^48.0,60.0" <taxi_data.csv> | cut -d',' -f10 > FARE/sample1.txt[39;72H[K[39;72H141,1[9C34%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H147  grep "^48.0,60.0" <taxi_data.c[39;72H[K[39;72H142,1[9C35%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H148  grep "^48.0,60.0" taxi_data.csv[39;72H[K[39;72H143,1[9C35%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H149  grep "^48.0,60.0" taxi_data.cs[39;72H[K[39;72H144,1[9C35%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H150  vgrep "^48.0,60.0" taxi_data.cs[39;72H[K[39;72H145,1[9C36%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H151  grep "^48.0,60.0" 2019-01-h1.csv[39;72H[K[39;72H146,1[9C36%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H152  mv /path/to/2019-01-h1.csv ~/CS131[39;72H[K[39;72H147,1[9C36%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H153  mv /path/to/taxi_data.csv ~/CS131[39;72H[K[39;72H148,1[9C36%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H154  mv /path/to/taxi_data.csv ~/cs131/a1/[39;72H[K[39;72H149,1[9C37%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H155  find ~ -name "taxi_data.csv"[39;72H[K[39;72H150,1[9C37%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H156  mv /path/to/taxi_data.csv[39;72H[K[39;72H151,1[9C37%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H157  find ~ -name "taxi_data.csv"[39;72H[K[39;72H152,1[9C38%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H158  mv /path/to/taxi_data.csv ~/CS131/[39;72H[K[39;72H153,1[9C38%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H159  ls[39;72H[K[39;72H154,1[9C38%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H160  vim ~/.bashrc[39;72H[K[39;72H155,1[9C39%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H161  source ~/.bashrc[39;72H[K[39;72H156,1[9C39%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H162  l[39;72H[K[39;72H157,1[9C39%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H163  w[39;72H[K[39;72H158,1[9C40%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H164  cd CS131[39;72H[K[39;72H159,1[9C40%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H165  ls[39;72H[K[39;72H160,1[9C40%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H166  cd a1[39;72H[K[39;72H161,1[9C41%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H167  cd FARE[39;72H[K[39;72H162,1[9C41%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H168  grep '48.0,161.0' taxi_data.csv > temp.csv[39;72H[K[39;72H163,1[9C41%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H169  ls[39;72H[K[39;72H164,1[9C42%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H170  ls ~/CS131[39;72H[K[39;72H165,1[9C42%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H171  ls ~[39;72H[K[39;72H166,1[9C42%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H172  ls ~/CS131/a1[39;72H[K[39;72H167,1[9C43%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H173  ls ~/CS131/a1/FARE[39;72H[K[39;72H168,1[9C43%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H174  find ~ name "taxi_data.csv"[39;72H[K[39;72H169,1[9C43%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H175  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3[39;72H[K[39;72H170,1[9C44%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H176  grep '48.0,161.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H171,1[9C44%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H177  cut -d, -f11 temp.csv > a1/FARE/48.0-161.0.txt[39;72H[K[39;72H172,1[9C44%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H178  grep '48.0,161.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H173,1[9C45%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H179  cut -d, -f11 temp.csv > a1/FARE[39;72H[K[39;72H174,1[9C45%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H180  grep '48.0,161.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H175,1[9C45%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H181  cut -d, -f11 temp.csv[39;72H[K[39;72H176,1[9C45%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H182  > 48.0-161.0.txt[39;72H[K[39;72H177,1[9C46%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H183  rm temp.csv[39;72H[K[39;72H178,1[9C46%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H184  ls[39;72H[K[39;72H179,1[9C46%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H185  cd 48.0-161.0.txt[39;72H[K[39;72H180,1[9C47%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H186  cat 48.0-161.0.txt[39;72H[K[39;72H181,1[9C47%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H187  vim 48.0-161.0.txt[39;72H[K[39;72H182,1[9C47%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H188  cat 48.0-161.0.txt[39;72H[K[39;72H183,1[9C48%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H189  clear[39;72H[K[39;72H184,1[9C48%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H190  ls[39;72H[K[39;72H185,1[9C48%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H191  cat 2019-01-h1.csv[39;72H[K[39;72H186,1[9C49%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H192  vim ~/.bashrc[39;72H[K[39;72H187,1[9C49%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H193  source ~/.bashrc[39;72H[K[39;72H188,1[9C49%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H194  l[39;72H[K[39;72H189,1[9C50%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H195  w[39;72H[K[39;72H190,1[9C50%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H196  cd FARE[39;72H[K[39;72H191,1[9C50%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H197  cd CS131/a1/FARE[39;72H[K[39;72H192,1[9C51%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H198  ls[39;72H[K[39;72H193,1[9C51%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H199  cat 48.0-161.0.txt[39;72H[K[39;72H194,1[9C51%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H200  grep '48.0,161.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H195,1[9C52%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H201  cut -d, -f11 temp.csv > a1/FARE/48.0-161.0.txt[39;72H[K[39;72H196,1[9C52%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H202  cut -d, -f11 temp.csv > CS131/a1/FARE/48.0-161.0.txt[39;72H[K[39;72H197,1[9C52%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H203  cut -d, -f11 temp.csv > 48.0-161.0.txt[39;72H[K[39;72H198,1[9C53%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H204  cat 48.0-161.0.txt[39;72H[K[39;72H199,1[9C53%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H205  rm temp.csv[39;72H[K[39;72H200,1[9C53%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H206  grep '50.0,160.0' taxi_data.csv > temp.csv[39;72H[K[39;72H201,1[9C54%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H207  grep '50.0,160.0' 2019-01-h1.csv > temp.csv[39;72H[K[39;72H202,1[9C54%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H208  cut -d, -f11 temp.csv > 50.0-160.0.txt[39;72H[K[39;72H203,1[9C54%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H209  rm temp.csv[39;72H[K[39;72H204,1[9C54%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H210  paste -sd+ FARE/48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H205,1[9C55%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H211  paste FARE/48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H206,1[9C55%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H212  paste -sd+ 48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H207,1[9C55%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H213  paste -sd+ FARE/48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H208,1[9C56%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H214  paste -sd+ 48.0-161.0.txt | bc | tee sum_48_161.txt[39;72H[K[39;72H209,1[9C56%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H215  lines_48_161=$(wc -l < 48.0-161.0.txt)[39;72H[K[39;72H210,1[9C56%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H216  echo "scale=2; $(cat sum_48_161.txt) / $lines_48_161" | bc >> a1.txt[39;72H[K[39;72H211,1[9C57%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H217  paste -sd+ 50.0-160.0.txt | bc | tee sum_50__160.txt[39;72H[K[39;72H212,1[9C57%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H218  paste -sd+ 50.0-160.0.txt | bc | tee sum_50_160.txt[39;72H[K[39;72H213,1[9C57%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H219  lines_50_160=$(wc -l < 50.0-160.0.txt)[39;72H[K[39;72H214,1[9C58%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H220  echo "scale=2; $(cat sum_50_160.txt) / $lines_50_160" | bc >> a1.txt[39;72H[K[39;72H215,1[9C58%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H221  grep "2019-01-10" <dataset.csv> | cut -d',' -f11 | sort -nr | head -1 >> a1.txt[39;72H[K[39;72H216,1[9C58%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H222  grep "2019-01-10" | cut -d',' -f11 | sort -nr | head -1 >> a1.txt[39;72H[K[39;72H217,1[9C59%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H223  grep "2019-01-10" cut -d',' -f11 | sort -nr | head -1 >> a1.txt[39;72H[K[39;72H218,1[9C59%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H224  grep -E ",3|,4|,5|,6|,7|,8|,9" <dataset.csv> | cut -d',' -f3 | sort | uniq -c | soo[38;1Hrt -nr | head -10 >> a1.txt[39;72H[K[39;72H219,1[9C59%[32;1H[?25h[?25l[39;73H20[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [32;1H[1;38r[1;1H[2M[1;39r[37;3H225  grep -E ",3|,4|,5|,6|,7|,8|,9" 2019-01-h1.csv | cut -d',' -f3 | sort | uniq -c | ss[38;1Hort -nr | head -10 >> a1.txt[39;72H[K[39;72H221,1[9C60%[32;1H[?25h[?25l[39;74H2[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H226  drop off location[39;72H[K[39;72H223,1[9C60%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [32;1H[1;38r[1;1H[2M[1;39r[37;3H227  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f16 | sort -nr | head -n 1
+  228  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f16 | sor[39;72H[K[39;72H224,1[9C61%[32;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H229  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f11 | sort -nr | head -n 1
+  230  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f10 | sort -nr | head -n 1[39;72H[K[39;72H225,1[9C61%[32;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H231  grep -E ',[3-9]|,[0-9]{2,},' 2019-01-h1.csv | cut -d, -f6 | sort | uniq -c | sort  [38;1H-nr | head -n 10[39;72H[K[39;72H226,1[9C62%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;74H7[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H232  history > cmds.log[39;72H[K[39;72H228,1[9C62%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H233  vim cmds.log[39;72H[K[39;72H229,1[9C63%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [32;1H[1;38r[1;1H[2M[1;39r[37;3H234  grep -E ',[3-9]|,[0-9]{2,},' 2019-01-h1.csv | cut -d, -f9 | sort | uniq -c | sort  [38;1H-nr | head -n 10[39;72H[K[39;72H230,1[9C63%[32;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H235  git commit -m "Completed a1 assignment"[39;72H[K[39;72H231,1[9C63%[32;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H236  git clone git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H232,1[9C64%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H237  git clone https://github.com/atnasia-mengistu/CS131[39;72H[K[39;72H233,1[9C64%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H238  git commit -m "Completed a1 assignment"
+  239  git commit[39;72H[K[39;72H234,1[9C65%[32;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H240  git config --global user.email "atnasia.mengistu@sjsu.edu"[39;72H[K[39;72H235,1[9C65%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H241  git config --global user.name Atnasia Mengistu[39;72H[K[39;72H236,1[9C65%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H242  git config --global Atnasia Mengistu[39;72H[K[39;72H237,1[9C66%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H243  git config[39;72H[K[39;72H238,1[9C66%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H244  git config --global "atnasia.mengistu@sjsu.edu"[39;72H[K[39;72H239,1[9C66%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H245  git commit -m[39;72H[K[39;72H240,1[9C66%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H246  git commit -m Done[39;72H[K[39;72H241,1[9C67%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H247  git push origin main[39;72H[K[39;72H242,1[9C67%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H248  a[39;72H[K[39;72H243,1[9C67%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H249  git push origin main[39;72H[K[39;72H244,1[9C68%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H250  git commit -m done[39;72H[K[39;72H245,1[9C68%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H251  git push origin main[39;72H[K[39;72H246,1[9C68%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H252  echo $HOME[39;72H[K[39;72H247,1[9C69%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H253  git fetch origin[39;72H[K[39;72H248,1[9C69%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H254  git push origin main[39;72H[K[39;72H249,1[9C69%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H255  cd CS131[39;72H[K[39;72H250,1[9C70%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H256  cd a1[39;72H[K[39;72H251,1[9C70%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H257  cd FARE[39;72H[K[39;72H252,1[9C70%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [32;1H[1;38r[1;1H[2M[1;39r[37;3H258  ls
+  259  vim cmds.log[39;72H[K[39;72H253,1[9C71%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;74H4[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H260  cd CS131/a1/FARE
+  261  vim cdms.log[39;72H[K[39;72H255,1[9C71%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;74H6[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H262  vim cmds.log[39;72H[K[39;72H257,1[9C72%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H263  git push origin main[39;72H[K[39;72H258,1[9C72%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H264  cd CS131[39;72H[K[39;72H259,1[9C72%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H265  git push origin main[39;72H[K[39;72H260,1[9C73%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H266  git commit -m Done[39;72H[K[39;72H261,1[9C73%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H267  clear
+  268  cd[39;72H[K[39;72H262,1[9C74%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;74H3[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H269  cd CS131[39;72H[K[39;72H264,1[9C74%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H270  cd a1[39;72H[K[39;72H265,1[9C74%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H271  cd FARE
+  272  vim cmds.log[39;72H[K[39;72H266,1[9C75%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[39;74H7[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H273  cd ~/CS131[39;72H[K[39;72H268,1[9C75%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H274  git add a1[39;72H[K[39;72H269,1[9C75%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H275  git commit -m DOne[39;72H[K[39;72H270,1[9C76%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H276  git push origin main[39;72H[K[39;72H271,1[9C76%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H277  cd a1[39;72H[K[39;72H272,1[9C76%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H278  ls[39;72H[K[39;72H273,1[9C77%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H279  cd FARE[39;72H[K[39;72H274,1[9C77%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H280  ls[39;72H[K[39;72H275,1[9C77%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H281  rm 2019-01-h1.csv[39;72H[K[39;72H276,1[9C78%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H282  ls[39;72H[K[39;72H277,1[9C78%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H283  rm CS131[39;72H[K[39;72H278,1[9C78%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H284  rm cdms.logs[39;72H[K[39;72H279,1[9C79%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H285  rm cdms.log[39;72H[K[39;72H280,1[9C79%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H286  ls[39;72H[K[39;72H281,1[9C79%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H287  rm sum_50__160.txt[39;72H[K[39;72H282,1[9C80%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H288  ls[39;72H[K[39;72H283,1[9C80%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H289  cd CS131[39;72H[K[39;72H284,1[9C80%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H290  cd[39;72H[K[39;72H285,1[9C81%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H291  git push origin main[39;72H[K[39;72H286,1[9C81%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H292  git commit -m DOne[39;72H[K[39;72H287,1[9C81%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H293  git clone <your-github-repo-link>[39;72H[K[39;72H288,1[9C81%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H294  cd CS131[39;72H[K[39;72H289,1[9C82%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H295  git push origin main[39;72H[K[39;72H290,1[9C82%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H296  cd CS131[39;72H[K[39;72H291,1[9C82%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H297  git add a1[39;72H[K[39;72H292,1[9C83%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H298  git commit -m DONE[39;72H[K[39;72H293,1[9C83%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H299  git push origin main[39;72H[K[39;72H294,1[9C83%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H300  git clone git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H295,1[9C84%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H301  git clone atnasia-mengistu/CS131.git[39;72H[K[39;72H296,1[9C84%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H302  git git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H297,1[9C84%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H303  git clone git@github.com:atnasia-mengistu/CS131.git[39;72H[K[39;72H298,1[9C85%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H304  git clone https://github.com/atnasia-mengistu/CS131[39;72H[K[39;72H299,1[9C85%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H305  git push origin main[39;72H[K[39;72H300,1[9C85%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H306  cd a1/FARE[39;72H[K[39;72H301,1[9C86%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H307  ls[39;72H[K[39;72H302,1[9C86%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H308  cd CS131[39;72H[K[39;72H303,1[9C86%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H309  ls[39;72H[K[39;72H304,1[9C87%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H310  cd[39;72H[K[39;72H305,1[9C87%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H311  cd CS131[39;72H[K[39;72H306,1[9C87%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H312  ls[39;72H[K[39;72H307,1[9C88%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H313  a1[39;72H[K[39;72H308,1[9C88%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H314  cd a1[39;72H[K[39;72H309,1[9C88%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H315  ls[39;72H[K[39;72H310,1[9C89%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H316  FARE[39;72H[K[39;72H311,1[9C89%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H317  find ~name 2019-01-h1.csv[39;72H[K[39;72H312,1[9C89%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H318  cd[39;72H[K[39;72H313,1[9C90%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H319  ls[39;72H[K[39;72H314,1[9C90%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H320  rm 2019-01-h1.csv[39;72H[K[39;72H315,1[9C90%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H321  ls[39;72H[K[39;72H316,1[9C90%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H322  cd CS131[39;72H[K[39;72H317,1[9C91%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H323  git push origin main[39;72H[K[39;72H318,1[9C91%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H324  rm a1/FARE/2019-01-h1.csv[39;72H[K[39;72H319,1[9C91%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H325  cd a1[39;72H[K[39;72H320,1[9C92%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H326  cd FARE[39;72H[K[39;72H321,1[9C92%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H327  rm 2019-01-h1.csv[39;72H[K[39;72H322,1[9C92%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H328  cd[39;72H[K[39;72H323,1[9C93%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H329  rm CS131/a1/FARE/2019-01-h1.csv[39;72H[K[39;72H324,1[9C93%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H330  git filter-repo --path a1/FARE/2019-01-h1.csv --invert-paths[39;72H[K[39;72H325,1[9C93%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H331  git --path a1/FARE/2019-01-h1.csv --invert-paths[39;72H[K[39;72H326,1[9C94%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H332  git rm --cached a1/FARE/2019-01-h1.csv[39;72H[K[39;72H327,1[9C94%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H333  git rm --cached 2019-01-h1.csv[39;72H[K[39;72H328,1[9C94%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H334  cd CS131[39;72H[K[39;72H329,1[9C95%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H335  git rm --cached 2019-01-h1.csv[39;72H[K[39;72H330,1[9C95%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H336  git rm --cached a1/FARE/2019-01-h1.csv[39;72H[K[39;72H331,1[9C95%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H337  git commit -m rlf[39;72H[K[39;72H332,1[9C96%[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H338  git push origin main[39;72H[K[39;72H333,1[9C96%[33;1H[?25h[?25l[39;62H~@k[33;1H[39;62H   [32;1H[1;38r[1;1H[2M[1;39r[37;3H339  git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch a1/FAREE[38;1H/2019-01-h1.csv' --prune-empty --tag-name-filter cat -- --all[39;72H[K[39;72H334,1[9C96%[32;1H[?25h[?25l[39;74H5[33;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H340  git push origin --force[39;72H[K[39;72H336,1[9C97%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H341  git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch a1/FAREE[38;1H/2019-01-h1.csv' --prune-empty --tag-name-filter cat -- --all[39;72H[K[39;72H337,1[9C97%[32;1H[?25h[?25l[39;74H8[33;1H[?25h[?25l[1;38r[1;1H[3M[1;39r[36;3H342  atnasia-mengistu
+  343  git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch a1/FAREE[38;1H/2019-01-h1.csv' --prune-empty --tag-name-filter cat -- --all[39;72H[K[39;72H339,1[9C98%[31;1H[?25h[?25l[39;73H40[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H344  git push origin --force
+  345  git push origin main[39;72H[K[39;72H341,1[9C98%[32;1H[?25h[?25l[1;38r[38;1H
+[1;39r[38;3H346  git clone https://github.com/atnasia-mengistu/CS131.git[39;72H[K[39;72H342,1[9C99%[33;1H[?25h[?25l[1;38r[1;1H[2M[1;39r[37;3H347  git clone git@github.com:atnasia-mengistu/CS131.git
+  348  vim ws2.txt[39;72H[K[39;72H343,1[9C99%[32;1H[?25h[?25l[39;62H~@k[32;1H[39;62H   [33;1H[1;38r[38;1H
+[1;39r[38;3H349  history > cmds.log[39;72H[K[39;72H344,1[9CBot[33;1H[?25h[?25l[39;74H5[34;1H[?25h[?25l[39;74H6[35;1H[?25h[?25l[39;74H7[36;1H[?25h[?25l[39;74H8[37;1H[?25h[?25l[39;74H9[38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H~@k[38;1H[39;62H   [38;1H[?25h[?25l[39;62H^[[38;1H[39;62H  [38;1H[39;62H^[[38;1H[39;62H  [38;1H[?25h[?25l[39;62H:[38;1H[39;62H[K[39;1H:[?2004h[?25hq![?25l[?2004l[23;2t[23;1t[39;1H[K[39;1H[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;atnasia_mengistu@instance-20250202-193014: ~/CS131/ws2[01;32matnasia_mengistu@instance-20250202-193014[00m:[01;34m~/CS131/ws2[00m$ vi[K[Kmv s[Kws.txt cmds.log ~/CS131/ws2/
+mv: cannot stat 'ws.txt': No such file or directory
+mv: 'cmds.log' and '/home/atnasia_mengistu/CS131/ws2/cmds.log' are the same file
+]0;atnasia_mengistu@instance-20250202-193014: ~/CS131/ws2[01;32matnasia_mengistu@instance-20250202-193014[00m:[01;34m~/CS131/ws2[00m$ mv ws.txt cmds.log ~/CS131/ws2/[1@2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+mv: 'ws2.txt' and '/home/atnasia_mengistu/CS131/ws2/ws2.txt' are the same file
+mv: 'cmds.log' and '/home/atnasia_mengistu/CS131/ws2/cmds.log' are the same file
+]0;atnasia_mengistu@instance-20250202-193014: ~/CS131/ws2[01;32matnasia_mengistu@instance-20250202-193014[00m:[01;34m~/CS131/ws2[00m$ git clone https://github.com/atnasia-mengistu/CS131.git
+fatal: destination path 'CS131' already exists and is not an empty directory.
+]0;atnasia_mengistu@instance-20250202-193014: ~/CS131/ws2[01;32matnasia_mengistu@instance-20250202-193014[00m:[01;34m~/CS131/ws2[00m$ git [K[K[K[Kgit clone https://github.com/atnasia-mengistu/CS131
+fatal: destination path 'CS131' already exists and is not an empty directory.
+]0;atnasia_mengistu@instance-20250202-193014: ~/CS131/ws2[01;32matnasia_mengistu@instance-20250202-193014[00m:[01;34m~/CS131/ws2[00m$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
 
-(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ system_profiler SPHardwareDataType
-Hardware:
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   cmds.log[m
+	[31mmodified:   ws2.txt[m
 
-    Hardware Overview:
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m../CS131/[m
+	[31m../temp[m
+	[31m../temp.csv[m
+	[31mCS131/[m
 
-      Model Name: MacBook Pro
-      Model Identifier: MacBookPro15,4
-      Processor Name: Quad-Core Intel Core i5
-      Processor Speed: 1.4 GHz
-      Number of Processors: 1
-      Total Number of Cores: 4
-      L2 Cache (per Core): 256 KB
-      L3 Cache: 6 MB
-      Hyper-Threading Technology: Enabled
-      Memory: 8 GB
-      System Firmware Version: 2069.80.3.0.0 (iBridge: 22.16.13051.0.0,0)
-      OS Loader Version: 582~3311
-      Serial Number (system): FVFYW2KPL40Y
-      Hardware UUID: F4EDF489-4678-5C78-8AF7-F8A37AA98941
-      Provisioning UDID: F4EDF489-4678-5C78-8AF7-F8A37AA98941
-      Activation Lock Status: Enabled
-#5)
-(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ sysctl hw.memsize
-hw.memsize: 8589934592
-(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ echo "$(sysctl -n hw.memsize) / 1024 / 1024 / 1024" | bc
-8
-#6)
-(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ sysctl -a | grep machdep.cpu.core_count
-machdep.cpu.core_count: 4
-(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ sysctl -a | grep machdep.cpu.thread_count
-machdep.cpu.thread_count: 8
-(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ sysctl -a | grep machdep.cpu.brand_string
-machdep.cpu.brand_string: Intel(R) Core(TM) i5-8257U CPU @ 1.40GHz
-#7)
-(base) Atnasias-MacBook-Pro:ws2 atnasiamengistu$ system_profiler SPSoftwareDataType
-Software:
-
-    System Software Overview:
-
-      System Version: macOS 15.3 (24D60)
-      Kernel Version: Darwin 24.3.0
-      Boot Volume: Macintosh HD
-      Boot Mode: Normal
-      Computer Name: Atnasia’s MacBook Pro
-      User Name: Atnasia Mengistu (atnasiamengistu)
-      Secure Virtual Memory: Enabled
-      System Integrity Protection: Enabled
-      Time since boot: 22 hours, 6 minutes
+no changes added to com
