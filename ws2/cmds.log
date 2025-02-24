@@ -347,3 +347,15 @@
   347  git clone git@github.com:atnasia-mengistu/CS131.git
   348  vim ws2.txt
   349  history > cmds.log
+  350  vim cmds.log
+  351  mv ws.txt cmds.log ~/CS131/ws2/
+  352  mv ws2.txt cmds.log ~/CS131/ws2/
+  353  git clone https://github.com/atnasia-mengistu/CS131.git
+  354  git clone https://github.com/atnasia-mengistu/CS131
+  355  git status
+  356  git commit -m ws2
+  357  git commit -a ws2
+  358  git commit -a
+  359  git push origin main
+  360  git pull 
+  361  history > cmds.log
