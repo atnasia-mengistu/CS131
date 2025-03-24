@@ -1,0 +1,50 @@
+ 1086  ./remindme.sh
+ 1087  cd CS131/a2
+ 1088  /.remindme.sh
+ 1089  ./remindme.sh
+ 1090  cd CS131
+ 1091  cd a2
+ 1092  ls
+ 1093  clear
+ 1094  ./remindme
+ 1095  ./remindme.sh
+ 1096  cler
+ 1097  clear
+ 1098  reminders.txt remindme.sh
+ 1099  ls
+ 1100  ./reminders.txt remindme.sh
+ 1101  chmod 755 reminders.txt
+ 1102  ./reminders.txt remindme.sh
+ 1103  cat reminders.txt
+ 1104  reminders.txt remindme.sh
+ 1105  ./remindme reminders.txt
+ 1106  ./remindme 
+ 1107  ./remindme.sh reminders.txt
+ 1108  clear
+ 1109  cd CS131
+ 1110  cd a2
+ 1111  ./remindme.sh
+ 1112  ./remindme.sh reminders.txt
+ 1113  cd CS131/ws56
+ 1114  ws56.txt >> vendors2.txt
+ 1115  ls
+ 1116  cat vendors.txt
+ 1117  cat vendors2.txt
+ 1118  rm venodrs2.txt
+ 1119  rm vendors2.txt
+ 1120  mv ws56.txt vendors2.txt
+ 1121  ls
+ 1122  awk -F',' '$10 >= 10 {tips[$14]++} 
+    END {for (t in tips) print t, tips[t]}' 2019-1-h1.csv > vendors.txt
+ 1123  awk -F',' '$10 >= 10 {tips[$14]++}END {for (t in tips) print t, tips[t]}' 2019-1-h1.csv > ws56.txt
+ 1124  awk -F',' '$10 >= 10 {tips[$14]++}END {for (t in tips) print t, tips[t]}' 2019-01-h1.csv > ws56.txt
+ 1125  hear -10 ws56.txt
+ 1126  head -10 ws56.txt
+ 1127  cat ws56.txt
+ 1128  awk -F',' '{tips[$14]++} 
+    END {for (t in tips) print t, tips[t]}' 2019-1-h1.csv | sort -nrk2 | head -20 >> vendors.txt
+ 1129  awk -F',' '{tips[$14]++} 
+ END {for (t in tips) print t, tips[t]}' 2019-01-h1.csv | sort -nrk2 | head -20 >> commontips.txt
+ 1130  cat commontips.txt
+ 1131  history | tail -n 50 > cmnd.log  # Adjust as needed
+ 1132  history | tail -n 50 > cmnd.log
