@@ -1,0 +1,16 @@
+ 1158  cd CS131
+ 1159  ls
+ 1160  mkdir a3
+ 1161  ls
+ 1162  cd a3
+ 1166  vim grader.awk
+ 1167  cat grader.awk
+ 1168  awk -f grader.awk grades.csv
+ 1169  ls
+ 1170  vim grades.csv
+ 1171  awk -f grader.awk grades.csv
+ 1172  awk -f grader.awk grades.csv > a3.txt
+ 1173  cat a3.txt
+ 1174  ls
+ 1179  awk -f grader.awk grades.csv
+ 1180  history > cmnd.log

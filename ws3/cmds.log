@@ -1,0 +1,15 @@
+  466  sudo apt update
+  467  sudo apt install python3-pip
+  468  pip install gdown
+  469  cd CS131
+  470  ls
+  471  gdown 1fc3saVu2GtG3Rft3zI-VOOsZhaqcSyn3
+  472  ls
+  473  mkdir ws3
+  474  mv 2019-01-h1.csv ws3
+  475  ls
+  476  ws3
+  477  cd ws3
+  478  ls 
+  479  script ws3.txt
+  480  history > cmds.log
