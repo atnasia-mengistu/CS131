@@ -1,0 +1,12 @@
+Processing student grades...
+
+Student Report:
+
+Name: Alice, Total: 253, Average: 84.33, Status: Pass
+Name: Bob, Total: 246, Average: 82.00, Status: Pass
+Name: Charlie, Total: 270, Average: 90.00, Status: Pass
+Name: David, Total: 195, Average: 65.00, Status: Fail
+Name: Eve, Total: 265, Average: 88.33, Status: Pass
+
+Top Scorer: Charlie with 270 points
+Lowest Scorer: David with 195 points

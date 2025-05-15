@@ -1,0 +1,75 @@
+  119  vim ~/.bashrc
+  120  source ~/.bashrc
+  121  l
+  122  w
+  123  mkdir -p a1/FARE
+  124  pwd
+  125  cd CS131
+  126  ls
+  127  cd a1
+  128  cd FARE
+  129  pwd
+  130  cd a1
+  131  ls -l
+  132  cd a1
+  133  ls
+  134  a1
+  135  cd a1
+  136  mkdir -p a1/FARE
+  137  cd FARE
+  138  mkidr a1/FARE
+  139  mkdir a1/FARE
+  140  cd FARE
+  141  CD a1
+  142  cd a1
+  143  cd FARE
+  144  grep '50.0,55.0' taxi.data.csv > temp csv
+  145  grep '50.0,55.0' taxi.data.csv > temp.csv
+  146  grep "^48.0,60.0" <taxi_data.csv> | cut -d',' -f10 > FARE/sample1.txt
+  147  grep "^48.0,60.0" <taxi_data.c
+  148  grep "^48.0,60.0" taxi_data.csv
+  149  grep "^48.0,60.0" taxi_data.cs
+  150  vgrep "^48.0,60.0" taxi_data.cs
+  151  grep "^48.0,60.0" 2019-01-h1.csv
+  152  mv /path/to/2019-01-h1.csv ~/CS131
+  153  mv /path/to/taxi_data.csv ~/CS131
+  154  mv /path/to/taxi_data.csv ~/cs131/a1/
+  155  find ~ -name "taxi_data.csv"
+  156  mv /path/to/taxi_data.csv
+  157  find ~ -name "taxi_data.csv"
+  158  mv /path/to/taxi_data.csv ~/CS131/
+  159  ls
+  160  vim ~/.bashrc
+  161  source ~/.bashrc
+  162  l
+  163  w
+  164  cd FARE
+  165  cd CS131/a1/FARE
+  166  ls
+  167  cat 48.0-161.0.txt
+  168  grep '48.0,161.0' 2019-01-h1.csv > temp.csv
+  169  cut -d, -f11 temp.csv > a1/FARE/48.0-161.0.txt
+  170  cut -d, -f11 temp.csv > CS131/a1/FARE/48.0-161.0.txt
+  171  cut -d, -f11 temp.csv > 48.0-161.0.txt
+  172  cat 48.0-161.0.txt
+  173  rm temp.csv
+  174  grep '50.0,160.0' taxi_data.csv > temp.csv
+  175  grep '50.0,160.0' 2019-01-h1.csv > temp.csv
+  176  cut -d, -f11 temp.csv > 50.0-160.0.txt
+  177  rm temp.csv
+  178  paste -sd+ FARE/48.0-161.0.txt | bc | tee sum_48_161.txt
+  179  paste FARE/48.0-161.0.txt | bc | tee sum_48_161.txt
+  180  paste -sd+ 48.0-161.0.txt | bc | tee sum_48_161.txt
+  182  paste -sd+ 48.0-161.0.txt | bc | tee sum_48_161.txt
+  183  lines_48_161=$(wc -l < 48.0-161.0.txt)
+  184  echo "scale=2; $(cat sum_48_161.txt) / $lines_48_161" | bc >> a1.txt
+  185  paste -sd+ 50.0-160.0.txt | bc | tee sum_50__160.txt
+  186  paste -sd+ 50.0-160.0.txt | bc | tee sum_50_160.txt
+  187  lines_50_160=$(wc -l < 50.0-160.0.txt)
+  188  echo "scale=2; $(cat sum_50_160.txt) / $lines_50_160" | bc >> a1.txt
+  193  grep -E ",3|,4|,5|,6|,7|,8|,9" 2019-01-h1.csv | cut -d',' -f3 | sort | uniq -c | sort -nr | head -10 >> a1.txt
+  194  drop off location
+  197  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f11 | sort -nr | head -n 1
+  198  grep '2019-01-10' 2019-01-h1.csv | cut -d, -f10 | sort -nr | head -n 1
+  199  grep -E ',[3-9]|,[0-9]{2,},' 2019-01-h1.csv | cut -d, -f9 | sort | uniq -c | sort -nr | head -n 10
+  200  history > cmds.log
